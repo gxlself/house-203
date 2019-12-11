@@ -35,7 +35,7 @@ var socketTask = null;var _default = { data: function data() {return { title: 'H
   },
   methods: {
     onMessage: function onMessage(response) {
-
+      console.log('onMessage', response);
     },
     onClose: function onClose(error) {
 
@@ -45,7 +45,10 @@ var socketTask = null;var _default = { data: function data() {return { title: 'H
     },
     onOpen: function onOpen(response) {
       socketTask.send({
-        data: 'love' });
+        data: '{love: 123}' });
+
+    },
+    sendMessage: function sendMessage(data) {
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))

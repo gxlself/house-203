@@ -16,15 +16,19 @@ app.use(function (req, res, next) {
   return next();
 });
 
+app.get('/user', function(req, res, next){
+  res.end();
+});
+
 app.ws('/', function (ws, req){
   ws.on('message', function (msg) {
-    console.log('/', msg);
-    ws.send(123);
+    ws.send('123');
   })
 }) 
 app.ws('/user', function (ws, req){
   ws.on('message', function (msg) {
-    ws.send(456);
+    console.log('/user', msg);
+    ws.send('{hate: 456}');
   })
 }) 
 

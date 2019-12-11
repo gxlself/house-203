@@ -25,7 +25,7 @@
 		},
 		methods: {
 			onMessage(response) {
-				
+				console.log('onMessage', response)
 			},
 			onClose(error) {
 				
@@ -35,8 +35,11 @@
 			},
 			onOpen(response) {
 				socketTask.send({
-					data: 'love'
+					data: '{love: 123}'
 				})
+			},
+			sendMessage(data) {
+				
 			}
 		}
 	}
