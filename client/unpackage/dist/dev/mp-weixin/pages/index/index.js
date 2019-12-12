@@ -44,9 +44,9 @@ var socketTask = null;var _default = { data: function data() {return { title: 'H
 
     },
     onOpen: function onOpen(response) {
-      socketTask.send({
-        data: '{love: 123}' });
-
+      // 				socketTask.send({
+      // 					data: '{love: 123}'
+      // 				})
     },
     sendMessage: function sendMessage(data) {
 
