@@ -19,7 +19,6 @@ router
     })
   })
   /* 登出 */
-  // UPDATE cs_user SET gender = '男' WHERE id = 4
   .get('/loginout', function(req, res, next) {
     var requestAuthorization = req.headers.authorization.split(',')[0]
     var requestUsername = req.headers.authorization.split(',')[1]
