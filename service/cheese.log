@@ -1,147 +1,126 @@
-[2019-12-12T22:14:50.774] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T22:14:50.785] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T22:14:50.790] [TRACE] login - 存储token值-SQL ====== UPDATE m_token SET a_token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjAwOTB9.izfRvNKZioa1axVp_tokxhqAGpNeuyzZIckkqsRAlxY',token='izfRvNKZioa1axVp_tokxhqAGpNeuyzZIckkqsRAlxY',username='gxlself'
-[2019-12-12T22:17:05.027] [TRACE] request - 服务开启 port - 2039
-[2019-12-12T22:17:10.595] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T22:17:10.595] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T22:17:10.596] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T22:17:10.596] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='izfRvNKZioa1axVp_tokxhqAGpNeuyzZIckkqsRAlxY'
-[2019-12-12T22:17:10.596] [INFO] token - 校验token ====== izfRvNKZioa1axVp_tokxhqAGpNeuyzZIckkqsRAlxY
-[2019-12-12T22:17:27.875] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T22:17:27.887] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T22:17:27.893] [TRACE] login - 存储token值-SQL ====== INSERT INTO m_token VALUES('mEGyC1QC3aqo_-qU9RWfS9hPeNb1R-SzoOpNKJaL_Ts', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjAyNDd9.mEGyC1QC3aqo_-qU9RWfS9hPeNb1R-SzoOpNKJaL_Ts', 'gxlself')
-[2019-12-12T22:19:02.510] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T22:19:02.510] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T22:19:02.510] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T22:19:02.510] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='mEGyC1QC3aqo_-qU9RWfS9hPeNb1R-SzoOpNKJaL_Ts'
-[2019-12-12T22:19:02.510] [INFO] token - 校验token ====== mEGyC1QC3aqo_-qU9RWfS9hPeNb1R-SzoOpNKJaL_Ts
-[2019-12-12T22:19:02.523] [WARN] request - 请求warn ====== 无此接口
-[2019-12-12T22:20:56.020] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T22:20:56.027] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T22:20:56.034] [TRACE] login - 存储token值-SQL ====== UPDATE m_token SET a_token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjA0NTZ9.Xrqx1L9GduXn6c9M9Ro1Q7QNBb4oudSNB4bog5nIUzE',token='Xrqx1L9GduXn6c9M9Ro1Q7QNBb4oudSNB4bog5nIUzE',username='gxlself'
-[2019-12-12T22:20:59.905] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T22:20:59.905] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T22:20:59.906] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T22:20:59.906] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='Xrqx1L9GduXn6c9M9Ro1Q7QNBb4oudSNB4bog5nIUzE'
-[2019-12-12T22:20:59.906] [INFO] token - 校验token ====== Xrqx1L9GduXn6c9M9Ro1Q7QNBb4oudSNB4bog5nIUzE
-[2019-12-12T22:20:59.923] [TRACE] loginout - 更改登录状态-SQL ====== UPDATE m_users SET login_status=1 WHERE username='Xrqx1L9GduXn6c9M9Ro1Q7QNBb4oudSNB4bog5nIUzE'
-[2019-12-12T22:22:11.245] [TRACE] request - 服务开启 port - 2039
-[2019-12-12T22:23:31.610] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T22:23:31.610] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T22:23:31.610] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T22:23:31.610] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='Xrqx1L9GduXn6c9M9Ro1Q7QNBb4oudSNB4bog5nIUzE'
-[2019-12-12T22:23:31.610] [INFO] token - 校验token ====== Xrqx1L9GduXn6c9M9Ro1Q7QNBb4oudSNB4bog5nIUzE
-[2019-12-12T22:24:43.057] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T22:24:43.083] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T22:24:43.091] [TRACE] login - 存储token值-SQL ====== INSERT INTO m_token VALUES('WgfACeSa2jM0GSPOZQT7y2u-1Lb6qSI2c-urKE03WoM', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjA2ODN9.WgfACeSa2jM0GSPOZQT7y2u-1Lb6qSI2c-urKE03WoM', 'gxlself')
-[2019-12-12T22:24:47.459] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T22:24:47.459] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T22:24:47.460] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T22:24:47.461] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='WgfACeSa2jM0GSPOZQT7y2u-1Lb6qSI2c-urKE03WoM'
-[2019-12-12T22:24:47.461] [INFO] token - 校验token ====== WgfACeSa2jM0GSPOZQT7y2u-1Lb6qSI2c-urKE03WoM
-[2019-12-12T22:24:47.486] [TRACE] loginout - 更改登录状态-SQL ====== UPDATE m_users SET login_status=1 WHERE username='WgfACeSa2jM0GSPOZQT7y2u-1Lb6qSI2c-urKE03WoM'
-[2019-12-12T22:25:06.550] [TRACE] request - 服务开启 port - 2039
-[2019-12-12T22:26:35.062] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T22:26:35.062] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T22:26:35.062] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T22:26:35.062] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='WgfACeSa2jM0GSPOZQT7y2u-1Lb6qSI2c-urKE03WoM'
-[2019-12-12T22:26:35.062] [INFO] token - 校验token ====== WgfACeSa2jM0GSPOZQT7y2u-1Lb6qSI2c-urKE03WoM
-[2019-12-12T22:26:45.467] [TRACE] register - 用户注册进行唯一校验 ====== select username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0';
-[2019-12-12T22:26:55.991] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T22:26:56.013] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T22:26:56.020] [TRACE] login - 存储token值-SQL ====== INSERT INTO m_token VALUES('ichVxzYP6SWeC3yXaqKK-evqL1cnYwFmTsZzJtRz1P4', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjA4MTZ9.ichVxzYP6SWeC3yXaqKK-evqL1cnYwFmTsZzJtRz1P4', 'gxlself')
-[2019-12-12T22:28:40.531] [TRACE] request - 服务开启 port - 2039
-[2019-12-12T22:29:47.048] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T22:29:47.048] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T22:29:47.048] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T22:29:47.048] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='ichVxzYP6SWeC3yXaqKK-evqL1cnYwFmTsZzJtRz1P4'
-[2019-12-12T22:29:47.048] [INFO] token - 校验token ====== ichVxzYP6SWeC3yXaqKK-evqL1cnYwFmTsZzJtRz1P4
-[2019-12-12T22:29:47.148] [TRACE] loginout - 更改登录状态-SQL ====== UPDATE m_users SET login_status=0 WHERE username='ichVxzYP6SWeC3yXaqKK-evqL1cnYwFmTsZzJtRz1P4'
-[2019-12-12T22:29:47.148] [TRACE] loginout - 登出-SQL ====== DELETE FROM m_token WHERE token='ichVxzYP6SWeC3yXaqKK-evqL1cnYwFmTsZzJtRz1P4' && username='gxlself'
-[2019-12-12T22:53:56.750] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T22:53:56.751] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T22:53:56.751] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T22:53:56.751] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='ichVxzYP6SWeC3yXaqKK-evqL1cnYwFmTsZzJtRz1P4'
-[2019-12-12T22:53:56.751] [INFO] token - 校验token ====== ichVxzYP6SWeC3yXaqKK-evqL1cnYwFmTsZzJtRz1P4
-[2019-12-12T22:54:14.914] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T22:54:14.936] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T22:54:14.945] [TRACE] login - 存储token值-SQL ====== UPDATE m_token SET a_token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjI0NTR9.cgOTHJ9ZWFX-0DVtQp6whtjVlLHMj-8VQV3Fs8MBkF0',token='cgOTHJ9ZWFX-0DVtQp6whtjVlLHMj-8VQV3Fs8MBkF0',username='gxlself'
-[2019-12-12T22:54:28.013] [TRACE] request - 服务开启 port - 2039
-[2019-12-12T22:54:30.917] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T22:54:31.084] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T22:54:31.087] [TRACE] login - 存储token值-SQL ====== UPDATE m_token SET a_token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjI0NzF9.0HZStEPzlRYXQnkYaGBeaUPo5SEF_LufCndohcGrJec',token='0HZStEPzlRYXQnkYaGBeaUPo5SEF_LufCndohcGrJec',username='gxlself'
-[2019-12-12T22:57:28.367] [TRACE] request - 服务开启 port - 2039
-[2019-12-12T22:57:30.956] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T22:57:31.039] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T22:57:59.263] [TRACE] request - 服务开启 port - 2039
-[2019-12-12T22:58:02.660] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T22:58:02.784] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T22:58:02.790] [TRACE] login - 更改登录状态-SQL ====== UPDATE m_users SET login_status=1 WHERE username='gxlself'
-[2019-12-12T22:58:02.792] [TRACE] login - 存储token值-SQL ====== UPDATE m_token SET a_token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjI2ODJ9.49sDTDz2YIesYwqXCHuv8aJXPXHrzNh4uJcMSddj4Zk',token='49sDTDz2YIesYwqXCHuv8aJXPXHrzNh4uJcMSddj4Zk',username='gxlself'
-[2019-12-12T23:11:24.852] [TRACE] request - 服务开启 port - 2039
-[2019-12-12T23:11:31.500] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T23:11:31.500] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T23:11:31.500] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T23:11:31.500] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='49sDTDz2YIesYwqXCHuv8aJXPXHrzNh4uJcMSddj4Zk'
-[2019-12-12T23:11:31.500] [INFO] token - 校验token ====== 49sDTDz2YIesYwqXCHuv8aJXPXHrzNh4uJcMSddj4Zk
-[2019-12-12T23:11:31.596] [ERROR] online - 登录状态修改失败error ====== ER_BAD_FIELD_ERROR: Unknown column 'o_usename' in 'where clause'
-[2019-12-12T23:11:31.597] [TRACE] loginout - 登出-SQL ====== DELETE FROM m_token WHERE token='49sDTDz2YIesYwqXCHuv8aJXPXHrzNh4uJcMSddj4Zk' && username='gxlself'
-[2019-12-12T23:11:50.681] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T23:11:50.681] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T23:11:50.681] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T23:11:50.681] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='49sDTDz2YIesYwqXCHuv8aJXPXHrzNh4uJcMSddj4Zk'
-[2019-12-12T23:11:50.682] [INFO] token - 校验token ====== 49sDTDz2YIesYwqXCHuv8aJXPXHrzNh4uJcMSddj4Zk
-[2019-12-12T23:12:00.906] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T23:12:00.913] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T23:12:00.914] [ERROR] online - 登录状态修改失败error ====== ER_BAD_FIELD_ERROR: Unknown column 'o_usename' in 'where clause'
-[2019-12-12T23:12:00.917] [TRACE] login - 存储token值-SQL ====== INSERT INTO m_token VALUES('cuWBu0_GBrvKUCCxxu5w_RVH8q3oq2DrhQrvXhQf4Do', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjM1MjB9.cuWBu0_GBrvKUCCxxu5w_RVH8q3oq2DrhQrvXhQf4Do', 'gxlself')
-[2019-12-12T23:12:47.793] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T23:12:47.793] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T23:12:47.793] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T23:12:47.794] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='cuWBu0_GBrvKUCCxxu5w_RVH8q3oq2DrhQrvXhQf4Do'
-[2019-12-12T23:12:47.794] [INFO] token - 校验token ====== cuWBu0_GBrvKUCCxxu5w_RVH8q3oq2DrhQrvXhQf4Do
-[2019-12-12T23:12:47.807] [ERROR] online - 登录状态修改失败error ====== ER_BAD_FIELD_ERROR: Unknown column 'o_usename' in 'where clause'
-[2019-12-12T23:12:47.809] [TRACE] loginout - 登出-SQL ====== DELETE FROM m_token WHERE token='cuWBu0_GBrvKUCCxxu5w_RVH8q3oq2DrhQrvXhQf4Do' && username='gxlself'
-[2019-12-12T23:15:24.804] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T23:15:24.804] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T23:15:24.805] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T23:15:24.805] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='cuWBu0_GBrvKUCCxxu5w_RVH8q3oq2DrhQrvXhQf4Do'
-[2019-12-12T23:15:24.805] [INFO] token - 校验token ====== cuWBu0_GBrvKUCCxxu5w_RVH8q3oq2DrhQrvXhQf4Do
-[2019-12-12T23:15:48.195] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T23:15:48.200] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T23:15:48.202] [ERROR] online - 登录状态修改失败error ====== ER_BAD_FIELD_ERROR: Unknown column 'o_usename' in 'where clause'
-[2019-12-12T23:15:48.205] [TRACE] login - 存储token值-SQL ====== INSERT INTO m_token VALUES('SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjM3NDh9.SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk', 'gxlself')
-[2019-12-12T23:16:14.654] [TRACE] request - 服务开启 port - 2039
-[2019-12-12T23:16:14.927] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T23:16:14.928] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T23:16:14.928] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T23:16:14.928] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk'
-[2019-12-12T23:16:14.928] [INFO] token - 校验token ====== SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk
-[2019-12-12T23:16:14.989] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T23:16:14.989] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T23:16:14.989] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T23:16:14.989] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk'
-[2019-12-12T23:16:14.989] [INFO] token - 校验token ====== SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk
-[2019-12-12T23:16:14.990] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T23:16:14.990] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T23:16:14.990] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T23:16:14.990] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk'
-[2019-12-12T23:16:14.990] [INFO] token - 校验token ====== SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk
-[2019-12-12T23:16:14.991] [TRACE] request - 请求进入host ===== 192.168.0.108:2039
-[2019-12-12T23:16:14.991] [TRACE] request - 请求进入referer ===== http://192.168.0.108:8080/
-[2019-12-12T23:16:14.991] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
-[2019-12-12T23:16:14.991] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk'
-[2019-12-12T23:16:14.991] [INFO] token - 校验token ====== SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk
-[2019-12-12T23:16:15.023] [ERROR] online - 登录状态修改失败error ====== ER_BAD_FIELD_ERROR: Unknown column 'gxlself' in 'where clause'
-[2019-12-12T23:16:15.023] [TRACE] loginout - 登出-SQL ====== DELETE FROM m_token WHERE token='SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk' && username='gxlself'
-[2019-12-12T23:16:15.024] [ERROR] online - 登录状态修改失败error ====== ER_BAD_FIELD_ERROR: Unknown column 'gxlself' in 'where clause'
-[2019-12-12T23:16:15.025] [TRACE] loginout - 登出-SQL ====== DELETE FROM m_token WHERE token='SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk' && username='gxlself'
-[2019-12-12T23:16:15.026] [TRACE] loginout - 登出-SQL ====== DELETE FROM m_token WHERE token='SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk' && username='gxlself'
-[2019-12-12T23:16:15.027] [ERROR] online - 登录状态修改失败error ====== ER_BAD_FIELD_ERROR: Unknown column 'gxlself' in 'where clause'
-[2019-12-12T23:16:15.027] [ERROR] online - 登录状态修改失败error ====== ER_BAD_FIELD_ERROR: Unknown column 'gxlself' in 'where clause'
-[2019-12-12T23:16:15.028] [TRACE] loginout - 登出-SQL ====== DELETE FROM m_token WHERE token='SYzNaOW3OSFcfOoaMSbO4W4otJ92-rl7NwF75Bc2VOk' && username='gxlself'
-[2019-12-12T23:16:35.950] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
-[2019-12-12T23:16:35.957] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
-[2019-12-12T23:16:35.958] [ERROR] online - 登录状态修改失败error ====== ER_BAD_FIELD_ERROR: Unknown column 'gxlself' in 'where clause'
-[2019-12-12T23:16:35.961] [TRACE] login - 存储token值-SQL ====== INSERT INTO m_token VALUES('na3My7kUR0t2YKiur6xe_VNLi975DCqj-66TP4aol30', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYxNjM3OTV9.na3My7kUR0t2YKiur6xe_VNLi975DCqj-66TP4aol30', 'gxlself')
-[2019-12-12T23:17:18.689] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:06:49.813] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:06:52.561] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:06:52.561] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:06:52.561] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:06:52.561] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c'
+[2019-12-13T18:06:52.561] [INFO] token - 校验token ====== drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c
+[2019-12-13T18:06:53.000] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:06:53.000] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:06:53.000] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:06:53.000] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c'
+[2019-12-13T18:06:53.000] [INFO] token - 校验token ====== drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c
+[2019-12-13T18:06:53.355] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:06:53.355] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:06:53.355] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:06:53.355] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c'
+[2019-12-13T18:06:53.355] [INFO] token - 校验token ====== drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c
+[2019-12-13T18:06:53.710] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:06:53.711] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:06:53.711] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:06:53.711] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c'
+[2019-12-13T18:06:53.711] [INFO] token - 校验token ====== drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c
+[2019-12-13T18:07:29.525] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:07:31.246] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:07:31.246] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:07:31.246] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:07:31.246] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c'
+[2019-12-13T18:07:31.246] [INFO] token - 校验token ====== drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c
+[2019-12-13T18:07:31.404] [TRACE] user - 链接ws ====== /user
+[2019-12-13T18:07:48.060] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:07:48.060] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-13T18:07:48.060] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:07:48.060] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c'
+[2019-12-13T18:07:48.060] [INFO] token - 校验token ====== drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c
+[2019-12-13T18:07:48.135] [TRACE] loginout - 登出-SQL ====== DELETE FROM m_token WHERE token='drGCPXp3YZ6YS1zCIerqoA3o9GFWsiRHiSwKSqy_G6c' && username='gxlself'
+[2019-12-13T18:07:48.194] [TRACE] online - 登录状态修改为离线-SQL ====== UPDATE m_users SET login_status=0 WHERE o_username='gxlself'
+[2019-12-13T18:08:04.618] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
+[2019-12-13T18:08:04.621] [TRACE] login - 登录查找token-SQL ====== SELECT username FROM m_token WHERE username='gxlself'
+[2019-12-13T18:08:04.623] [TRACE] login - 存储token值-SQL ====== INSERT INTO m_token VALUES('CP6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imd4bHNlbGYiLCJpYXQiOjE1NzYyMzE2ODR9.CP6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw', 'gxlself')
+[2019-12-13T18:08:04.685] [TRACE] online - 登录状态修改为在线-SQL ====== UPDATE m_users SET login_status=1 WHERE o_username='gxlself'
+[2019-12-13T18:08:05.780] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:08:05.780] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:08:05.780] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:08:05.780] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='CP6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:08:05.780] [INFO] token - 校验token ====== CP6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:08:05.784] [TRACE] user - 链接ws ====== /user
+[2019-12-13T18:44:57.526] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:44:57.526] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:44:57.526] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:44:57.526] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='CP6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:44:57.526] [INFO] token - 校验token ====== CP6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:44:57.530] [TRACE] user - 链接ws ====== /user
+[2019-12-13T18:45:57.882] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:46:03.004] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:46:03.004] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:46:03.004] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:46:03.004] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:46:03.004] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:46:08.187] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:46:09.618] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:46:09.618] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:46:09.618] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:46:09.618] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:46:09.618] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:47:34.001] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:47:37.149] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:47:37.149] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:47:37.149] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:47:37.149] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:47:37.149] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:49:37.459] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:49:39.073] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:49:39.073] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:49:39.074] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:49:39.074] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:49:39.074] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:49:44.201] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:49:44.201] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:49:44.201] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:49:44.201] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:49:44.201] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:49:45.352] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:49:45.352] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:49:45.352] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:49:45.352] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:49:45.352] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:49:46.432] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:49:46.432] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:49:46.433] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:49:46.433] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:49:46.433] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:49:47.613] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:49:47.613] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:49:47.613] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:49:47.613] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:49:47.613] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:51:41.229] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:51:42.400] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:51:42.400] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:51:42.400] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:51:42.400] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:51:42.400] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:51:56.816] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:52:03.040] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:52:03.040] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:52:03.041] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:52:03.041] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:52:03.041] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:52:20.625] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:52:22.064] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:52:22.064] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:52:22.064] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:52:22.064] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:52:22.064] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:52:40.034] [TRACE] request - 服务开启 port - 2039
+[2019-12-13T18:52:41.633] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:52:41.633] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:52:41.633] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:52:41.633] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:52:41.633] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:52:41.931] [TRACE] user - 链接ws ====== /user
+[2019-12-13T18:53:40.175] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-13T18:53:40.175] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-13T18:53:40.175] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-13T18:53:40.175] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
+[2019-12-13T18:53:40.175] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
+[2019-12-13T18:53:40.276] [TRACE] user - 链接ws ====== /user

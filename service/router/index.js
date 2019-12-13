@@ -4,10 +4,10 @@ var router = express.Router();
 var md5 = require('md5');
 var { sqlTodo, onlineStatusUpdate } = require('../utils/sql') 
 var jwt = require('jsonwebtoken');
-var { sign } = require('../config/config')
+var { sign, ONLINE_STATUS } = require('../config/config')
 var loginLogger = require('../utils/log').useLog('login')
 var registerLogger = require('../utils/log').useLog('register')
-const ONLINE_STATUS = 1;
+
 expressWs(router);
 
 router

@@ -36,12 +36,24 @@ app.use('/', index)
 
 //拦截器
 app.use(function (req, res, next) {
-  try{
-    var requestAuthorization = req.headers.authorization.split(',')[0]
-    var requestUsername = req.headers.authorization.split(',')[1]
-  } catch(err) {
-    res.send({code: -1, msg: '无效token', status: 401});
-    return
+  let isSocket = (req.headers.upgrade === 'websocket')
+  var requestAuthorization = null;
+  var requestUsername = null;
+  if (isSocket) {
+    try{
+      requestAuthorization = req.query.authorization.split(',')[0]
+      requestUsername = req.query.authorization.split(',')[1]
+    } catch(err) {
+      return
+    }
+  } else {
+    try{
+      requestAuthorization = req.headers.authorization.split(',')[0]
+      requestUsername = req.headers.authorization.split(',')[1]
+    } catch(err) {
+      res.send({code: -1, msg: '无效token', status: 401});
+      return
+    }
   }
   const sqlLog = `SELECT a_token,username FROM m_token WHERE token='${requestAuthorization}'`
   reqLog.trace(`请求进入host ===== ${req.headers.host}`)
@@ -50,9 +62,9 @@ app.use(function (req, res, next) {
   tokenLog.info(`登录SQL执行 ====== ${sqlLog}`)
   tokenLog.info(`校验token ====== ${requestAuthorization}`)
   sqlTodo(sqlLog, (result, fields) => {
-    if (result.length <= 0) {
+    if (result.length <= 0 && !isSocket) {
       res.send({code: -1, msg: '无效token', status: 401});
-    } else {
+    } else if (result.length > 0 && !isSocket){
       const token = result[0].a_token
       const username = result[0].username
       jwt.verify(token, sign, (err, decoded) => {
@@ -67,15 +79,19 @@ app.use(function (req, res, next) {
           }
         }
       })
+    } else {
+      next()
     }
   }, error => {
     tokenLog.error(`校验token ====== ${error.manage || '数据库查询错误'}`)
-    res.send({code: -2, msg: '数据库查询错误-token', status: 401});
+    if (!isSocket) {
+      res.send({code: -2, msg: '数据库查询错误-token', status: 401});
+      return
+    }
   })
 });
-
 // 有拦截器后的路由注入
-app.use('/user', user)
+app.use('/', user)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
