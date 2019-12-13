@@ -124,3 +124,4 @@
 [2019-12-13T18:53:40.175] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw'
 [2019-12-13T18:53:40.175] [INFO] token - 校验token ====== wdd6tYOj0lp_7jealjymCV6Hl_3liM5mInPdMo5OHBcw
 [2019-12-13T18:53:40.276] [TRACE] user - 链接ws ====== /user
+[2019-12-13T23:25:47.838] [TRACE] request - 服务开启 port - 2039

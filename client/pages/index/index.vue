@@ -1,7 +1,23 @@
 <template>
 	<view class="page gxl-white">
 		<header-bar title="203屋" :back="false" sure="退出" @surefun="loginout"></header-bar>
-		
+		<scroll-view scroll-y
+					 scroll-with-animation="true"
+					>
+			<view class="user-chat" :class="[{'chat-left': !c.user.isSelf}, {'chat-right': c.user.isSelf}]" v-for="(c, i) in chat" :key="i">
+				<view class="left-ava">
+					
+				</view>
+				<view class="chat-content">
+					<text>
+						{{c.user.say}}
+					</text>
+				</view>
+				<view class="right-ava">
+					
+				</view>
+			</view>
+		</scroll-view>
 	</view>
 </template>
 
@@ -14,6 +30,64 @@
 			return {
 				usernameFoucus: false,
 				passwordFoucus: false,
+				chat: [
+					{
+						user: {
+							isSelf: true,
+							nickname: "张三",
+							say: "不糊会二不糊会二不糊会二不糊会二不糊会二不糊会二不糊会二不糊会二不糊会二不糊会二不糊会二 "
+						}
+					},
+					{
+						user: {
+							isSelf: true,
+							nickname: '李四',
+							say: "难的糊涂"
+						}
+					},
+					{
+						user: {
+							isSelf: false,
+							nickname: '李四',
+							say: "难的糊涂"
+						}
+					},
+					{
+						user: {
+							isSelf: false,
+							nickname: '李四',
+							say: "难的糊涂"
+						}
+					},
+					{
+						user: {
+							isSelf: true,
+							nickname: '李四',
+							say: "难的糊涂难的糊涂难的糊涂难的糊涂难的糊涂难的糊涂难的糊涂难的糊涂难的糊涂难的糊涂难的糊涂"
+						}
+					},
+					{
+						user: {
+							isSelf: false,
+							nickname: '李四',
+							say: "难的糊涂"
+						}
+					},
+					{
+						user: {
+							isSelf: false,
+							nickname: '李四',
+							say: "难的糊涂"
+						}
+					},
+					{
+						user: {
+							isSelf: true,
+							nickname: '李四',
+							say: "难的糊涂"
+						}
+					}
+				]
 			}
 		},
 		components: {
@@ -61,68 +135,36 @@
 <style lang="scss" scoped>
 .page{
 	padding: 80upx 32upx 0;
-	.h3-title{
-		padding: 40upx 0;
-		font-size: 40upx;
-		font-weight:bold;
-	}
-	.login-input{
-		padding: 44upx 0 0;
-		margin: 0 0 80upx;
-		color: #666; 
-		font-size: 32upx;
-		input{
-			caret-color: #FC8800;
-			padding: 28upx 0;
-		}
-		input + input{
-			margin: 20upx 0 0;
-		}
-		.focus{
-			position:relative;
-			border-bottom-color: #DD4CB2!important;
-		}
-		.focus::after {
-			content:' ';
+	.user-chat{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		.left-ava, .right-ava{
+			width: 80upx;
+			height: 80upx;
 			border-radius: 50%;
-			position: absolute;
-			z-index:1;
-			background-color: rgba(247,85,109, .3);
-			-webkit-animation: waveCircle 1s ease normal ;
-			box-shadow: 0 0 10px rgba(0,0,0,.3) inset;
+			background: #eee;
 		}
-	}
-	.login{
-		&-btn{
-			font-size: 32upx;
-			height: 96upx;
-			line-height: 96upx;
-			border-radius: 96upx;
-			color: #fff;
-			background: linear-gradient(171deg,rgba(255,93,80,1) 0%,rgba(247,85,109,1) 20%,rgba(221,76,178,1) 37%,rgba(162,77,244,1) 60%,rgba(101,113,255,1) 77%,rgba(39,203,251,1) 100%);
-		}
-	}
-	.find-password{
-		color: #EB3055;
-		font-size: 28upx;
-		text-align: right;
-		padding: 20upx 8upx;
-		margin: 10upx 0;
+		
 	}
 }
-@keyframes waveCircle {
-	0% {
-		left: 50%;
-		top: 50%;
-		width: 0;
-		height: 0;
-    }
-    100% {
-		left: 0upx;
-		top: -300upx;
-		opacity: 0;
-		width: 700upx;
-		height: 700upx;
-    }
+.chat-content{
+	flex: 1;
+	text{
+		display: inline-flex;
+		background: #DD4CB2;
+		padding: 10upx;
+		border-radius: 8upx;
+	}
+}
+.chat-left{
+	.chat-content{
+		text-align: left;
+	}
+}
+.chat-right{
+	.chat-content{
+		text-align: right;
+	}
 }
 </style>
