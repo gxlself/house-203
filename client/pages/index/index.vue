@@ -38,9 +38,14 @@
 				
 			},
 			closeSocket() {
-				request('/loginout').then(res => {
+				request('/loginout', {}, 'POST').then(res => {
 					if (res.code === 0) {
-						console.log('loginout', res)
+						uni.clearStorageSync()
+						uni.showToast({ icon: 'loading', title: res.msg, duration:1000 , mask: true})
+						let timer = setTimeout(() => {
+							clearTimeout(timer)
+							uni.reLaunch({ url: '../login/login' })
+						}, 1000)
 					} else {
 						console.log('err', res)
 					}
