@@ -84,7 +84,6 @@ const socketTask = function(url) {
 		})
 	})
 }
-
 module.exports = {
 	request,
 	login,
