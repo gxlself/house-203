@@ -49,6 +49,7 @@
 	align-items: center;
 	font-size: 30upx;
 	text-align: right;
+	z-index: 2;
 	.header-left, .header-right{
 		width: 150upx;
 		height: 80upx;

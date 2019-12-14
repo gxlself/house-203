@@ -1,19 +1,37 @@
 var express = require('express');
 var expressWs = require('express-ws');
 var router = express.Router();
-var { sqlTodo, onlineStatusUpdate } = require('../utils/sql') ;
+var { sqlTodo, onlineStatusUpdate, queryTodo } = require('../utils/sql') ;
 var { NOT_ONLINR_STATUS } = require('../config/config');
 var userLogger = require('../utils/log').useLog('user');
 var loginoutLogger = require('../utils/log').useLog('loginout');
 expressWs(router);
-
+let users = []
+let connections = []
 router
   .ws('/user', function (ws, req){
-    console.log('/user is ws connected', ws)
     userLogger.trace(`链接ws ====== /user`)
     ws.on('message', function (msg) {
-      console.log(msg)
-      ws.send('{test: true}');
+      let requestUsername = req.query.authorization.split(',')[1]
+      let getMsg = JSON.parse(msg)
+      if (!users.includes(requestUsername)) {
+        users.push(requestUsername)
+        connections.push(ws)
+      }
+      ws.on('close', function(msg) {
+        users.splice(users.indexOf(requestUsername), 1)
+      })
+      switch(getMsg.type) {
+        case 'getUserInfo':
+          sendUserInfo(ws, getMsg)
+          break;
+        case 'groupChat':
+          sendChatInfo(ws, requestUsername, getMsg)
+          break;
+        default: 
+          console.log('-----default----')
+          break;
+      }
     })
   })
   /* 登出 */
@@ -32,5 +50,48 @@ router
       res.send({code: -1, msg: '退出成功', status: 200});
     })
   })
+  
+const sendChatInfo = function(ws, requestUsername, getMsg) {
+  let chatOption = {
+    code: 0,
+    data: {
+      type: getMsg.type,
+      groupId: getMsg.groupId,
+      from: getMsg.user,
+      user: requestUsername,
+      content: {
+        type: getMsg.content.type,
+        default: getMsg.content.default
+      },
+      timerstamp: new Date().getTime()
+    },
+    msg: "发送消息成功"
+  }
+  // ws.send(JSON.stringify(chatOption));
+  boardcast(chatOption)
+  chatOption = null;
+}
+const sendUserInfo = function(ws, getMsg) {
+  const queryGroupUserSql = `SELECT username, avator FROM m_group WHERE group_id = ${getMsg.groupId}`
+  queryTodo(queryGroupUserSql).then(res => {
+    let userOption = {
+      code: 0,
+      data: {
+        type: getMsg.type,
+        users: res,
+        timerstamp: new Date().getTime()
+      },
+      msg: "发送消息成功"
+    }
+    ws.send(JSON.stringify(userOption));
+    userOption = null;
+  })
+}
+
+const boardcast = function(option) {
+  connections.forEach(function(connect) {
+    connect.send(JSON.stringify(option));
+  })
+}
 
 module.exports = router;

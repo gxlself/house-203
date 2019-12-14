@@ -62,25 +62,35 @@ app.use(function (req, res, next) {
   tokenLog.info(`登录SQL执行 ====== ${sqlLog}`)
   tokenLog.info(`校验token ====== ${requestAuthorization}`)
   sqlTodo(sqlLog, (result, fields) => {
-    if (result.length <= 0 && !isSocket) {
-      res.send({code: -1, msg: '无效token', status: 401});
-    } else if (result.length > 0 && !isSocket){
+    if (result.length <= 0) {
+      if (isSocket) {
+        req.ws.send(`{"code":-1,"msg":"无效token"}`);
+      } else {
+        res.send({code: -1, msg: '无效token', status: 401});
+      }
+    } else{
       const token = result[0].a_token
       const username = result[0].username
       jwt.verify(token, sign, (err, decoded) => {
         //当token验证失败时会抛出如下错误
         if (err) {
-          res.send({code: -1, msg: 'token失效', status: 401});
+          if (isSocket) {
+            req.ws.send(`{"code":-1,"msg":"token失效"}`);
+          } else {
+            res.send({code: -1, msg: 'token失效', status: 401});
+          }
         } else {
           if (username === requestUsername) {
             next()
           } else {
-            res.send({code: -1, msg: '无效token', status: 401});
+            if (isSocket) {
+              req.ws.send(`{"code":-1,"msg":"无效token"}`);
+            } else {
+              res.send({code: -1, msg: '无效token', status: 401});
+            }
           }
         }
       })
-    } else {
-      next()
     }
   }, error => {
     tokenLog.error(`校验token ====== ${error.manage || '数据库查询错误'}`)

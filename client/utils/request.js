@@ -17,7 +17,7 @@ const request = function(url, data = {}, method = 'GET') {
 				"authorization": `${token},${username}`
 			},
 			success(response) {
-				if (response.data.status === 400 || response.data.status === 401 || response.data.status === 403 || response.data.status === 404) {
+				if (response.data.status === 400 || response.data.status === 401 || response.data.status === 403) {
 					uni.clearStorageSync()
 					uni.reLaunch({ url: '../../pages/login/login' })
 				} else if (response.data.status === 200) {
@@ -67,9 +67,16 @@ const register = function(url, data = {}, method = 'POST') {
 	})
 }
 const socketTask = function(url) {
+	let token = uni.getStorageSync('token')
+	let username = uni.getStorageSync('username')
+	if (!token || !username) {
+		uni.clearStorageSync()
+		uni.reLaunch({ url: '../../pages/login/login' })
+		return
+	}
 	return new Promise(function(resolve, reject) {
 		const socket = uni.connectSocket({
-			url: WS_URL + url,
+			url: WS_URL + url + `?authorization=${token},${username}`,
 			complete: ()=> {}
 		});
 		socket.onOpen(() => {
