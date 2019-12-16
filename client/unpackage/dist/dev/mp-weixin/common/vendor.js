@@ -6735,6 +6735,23 @@ createApp(app).$mount();
 
 /***/ }),
 
+/***/ "G:\\practice\\socket\\client\\main.js?{\"page\":\"pages%2Ffind-password%2Ffind-password\"}":
+/*!******************************************************************************************!*\
+  !*** G:/practice/socket/client/main.js?{"page":"pages%2Ffind-password%2Ffind-password"} ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "G:\\practice\\socket\\client\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _findPassword = _interopRequireDefault(__webpack_require__(/*! ./pages/find-password/find-password.vue */ "G:\\practice\\socket\\client\\pages\\find-password\\find-password.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_findPassword.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
 /***/ "G:\\practice\\socket\\client\\main.js?{\"page\":\"pages%2Findex%2Findex\"}":
 /*!**************************************************************************!*\
   !*** G:/practice/socket/client/main.js?{"page":"pages%2Findex%2Findex"} ***!
@@ -6752,6 +6769,40 @@ createPage(_index.default);
 
 /***/ }),
 
+/***/ "G:\\practice\\socket\\client\\main.js?{\"page\":\"pages%2Flogin%2Flogin\"}":
+/*!**************************************************************************!*\
+  !*** G:/practice/socket/client/main.js?{"page":"pages%2Flogin%2Flogin"} ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "G:\\practice\\socket\\client\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _login = _interopRequireDefault(__webpack_require__(/*! ./pages/login/login.vue */ "G:\\practice\\socket\\client\\pages\\login\\login.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_login.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "G:\\practice\\socket\\client\\main.js?{\"page\":\"pages%2Fregister%2Fregister\"}":
+/*!********************************************************************************!*\
+  !*** G:/practice/socket/client/main.js?{"page":"pages%2Fregister%2Fregister"} ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "G:\\practice\\socket\\client\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _register = _interopRequireDefault(__webpack_require__(/*! ./pages/register/register.vue */ "G:\\practice\\socket\\client\\pages\\register\\register.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_register.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["createPage"]))
+
+/***/ }),
+
 /***/ "G:\\practice\\socket\\client\\pages.json":
 /*!********************************************!*\
   !*** G:/practice/socket/client/pages.json ***!
@@ -6764,6 +6815,25 @@ createPage(_index.default);
 
 /***/ }),
 
+/***/ "G:\\practice\\socket\\client\\utils\\env.js":
+/*!**********************************************!*\
+  !*** G:/practice/socket/client/utils/env.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.API_URL = exports.WS_URL = void 0; // office
+var WS_URL = "ws://172.16.1.238:2039";exports.WS_URL = WS_URL;
+var API_URL = 'http://172.16.1.238:2039';
+
+// home
+// const API_URL='http://192.168.0.106:2039';
+// const WS_URL = "ws://192.168.0.106:2039"
+exports.API_URL = API_URL;
+
+/***/ }),
+
 /***/ "G:\\practice\\socket\\client\\utils\\request.js":
 /*!**************************************************!*\
   !*** G:/practice/socket/client/utils/request.js ***!
@@ -6772,14 +6842,67 @@ createPage(_index.default);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {var request = function request(url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'GET';
+/* WEBPACK VAR INJECTION */(function(uni) {var _env = __webpack_require__(/*! ./env */ "G:\\practice\\socket\\client\\utils\\env.js");
+var request = function request(url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'GET';
+  uni.showLoading();
+  return new Promise(function (resolve, reject) {
+    var token = uni.getStorageSync('token');
+    var username = uni.getStorageSync('username');
+    if (!token || !username) {
+      uni.clearStorageSync();
+      uni.reLaunch({ url: '../../pages/login/login' });
+      return;
+    }
+    uni.request({
+      url: _env.API_URL + url,
+      data: data,
+      method: method,
+      header: {
+        "authorization": "".concat(token, ",").concat(username) },
+
+      success: function success(response) {
+        if (response.data.status === 400 || response.data.status === 401 || response.data.status === 403) {
+          uni.clearStorageSync();
+          uni.reLaunch({ url: '../../pages/login/login' });
+        } else if (response.data.status === 200) {
+          resolve(response.data);
+        }
+        uni.hideLoading();
+      },
+      fail: function fail(error) {
+        reject(error);
+        uni.hideLoading();
+      } });
+
+  });
+};
+var login = function login(url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'POST';
+  uni.showLoading();
   return new Promise(function (resolve, reject) {
     uni.request({
-      url: url,
+      url: _env.API_URL + url,
       data: data,
       method: method,
       success: function success(response) {
-        resolve(response);
+        resolve(response.data);
+        uni.hideLoading();
+      },
+      fail: function fail(error) {
+        reject(error);
+        uni.hideLoading();
+      } });
+
+  });
+};
+var register = function register(url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'POST';
+  return new Promise(function (resolve, reject) {
+    uni.request({
+      url: _env.API_URL + url,
+      data: data,
+      method: method,
+      success: function success(response) {
+        resolve(response.data);
+        uni.hideLoading();
       },
       fail: function fail(error) {
         reject(error);
@@ -6787,8 +6910,29 @@ createPage(_index.default);
 
   });
 };
+var socketTask = function socketTask(url) {
+  var token = uni.getStorageSync('token');
+  var username = uni.getStorageSync('username');
+  if (!token || !username) {
+    uni.clearStorageSync();
+    uni.reLaunch({ url: '../../pages/login/login' });
+    return;
+  }
+  return new Promise(function (resolve, reject) {
+    var socket = uni.connectSocket({
+      url: _env.WS_URL + url + "?authorization=".concat(token, ",").concat(username),
+      complete: function complete() {} });
+
+    socket.onOpen(function () {
+      resolve(socket);
+    });
+  });
+};
 module.exports = {
-  request: request };
+  request: request,
+  login: login,
+  register: register,
+  socketTask: socketTask };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ })

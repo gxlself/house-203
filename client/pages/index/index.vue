@@ -9,29 +9,30 @@
 					 class="scroll-view"
 					 style="background: #F8F8F8;"
 					 :scroll-top="scrollTop" 
+					 id="scrollView"
 					 >
 			<view class="user-chat" 
 				 :class="[{'chat-left': username !== c.from || username !== c.user}, {'chat-right': username === c.from || username === c.user}]" 
 				 v-for="(c, i) in chats" :key="i">
-				<view class="left-ava" v-if="!(username === c.from || username === c.user)">
-					{{c.from[0]}}
+				<view :class="[{'left-ava': username !== c.user}, {'left-node': username === c.from}]">
+					{{ username !== c.user ? c.from[0] : ''}}
 				</view>
-				<view class="left-node" v-if="username === c.from || username === c.user"></view>
 				<view class="chat-content">
 					<text :class="[
 						{'userself': !(username !== c.from || username !== c.user)},
 						{'other': username !== c.from || username !== c.user}
-					]" v-html="c.content.default"></text>
+					]" v-html="c.content.default">
+					</text>
 				</view>
-				<view class="right-ava" v-if="!(username !== c.from || username !== c.user)">
-					{{username[0]}}
+				<view :class="[{'right-ava': username === c.user}, {'right-node': username !== c.from}]">
+					{{ username === c.user ? c.from[0] : ''}}
 				</view>
-				<view class="right-node" v-if="username !== c.from || username !== c.user"></view>
 			</view>
 		</scroll-view>
 		<view class="bottom-input" :class="{'iphoneX': isIphoneX}">
-			<input type="text" v-model="chatContent" class="chat-input" @blur="blur" @focus="focus" confirm-type="send" @confirm="sendMessage"/>
-			<!-- <button class="send-chat" type="primary">+</button> -->
+			<input type="text" v-model="chatContent" class="chat-input" :focus="true" @blur="blur" @focus="focus" confirm-type="send" :confirm-hold="true" @confirm="sendMessage"></input>
+			<button v-if="!isFocus && chatContent" class="send-chat" type="primary" @tap="sendMessage">+</button>
+			<button v-if="!isFocus && chatContent" class="send-chat" type="primary" @tap="sendMessage">发送</button>
 		</view>
 	</view>
 </template>
@@ -48,20 +49,15 @@
 				chatContent: '',
 				chats: [],
 				users: {},
-				scrollTop: 999
+				scrollTop: 1000,
+				isFocus: false
 			}
 		},
 		components: {
 			headerBar
 		},
 		onLoad() {
-			socketTask('/user').then(socket => {
-				chatSocket = socket
-				chatSocket.onMessage(this.onMessage)
-				chatSocket.onError(this.onError)
-				chatSocket.onClose(this.closeSocket)
-				return socket
-			}).then(socket => {
+			this.initConnect((socket) => {
 				let chat = {
 					type: 'getUserInfo',
 					groupId: 1
@@ -87,9 +83,7 @@
 						case 'groupChat': 
 							that.chats.push(message.data)
 							that.$nextTick(() => {
-								setTimeout(() => {
-									that.scrollTop = 9999999
-								}, 100)
+								this.scrollToBottom()
 							})
 							break;
 						case 'getUserInfo': 
@@ -99,29 +93,27 @@
 					}
 				}
 			},
-			onError(error) {},
-			closeSocket() {},
+			onError(error) {
+				this.initConnect()
+			},
+			closeSocket() {
+				this.initConnect()
+			},
 			focus() {
-				let that = this
 				// #ifdef H5
-				this.scrollTop = document.scrollingElement.scrollTop;
 				setTimeout(() => {
-					document.scrollingElement.scrollTo(0, uni.getSystemInfoSync().screenHeight)
-					that.$nextTick(() => {
-						setTimeout(() => {
-							that.scrollTop = 9999999
-						}, 100)
-					})
+					document.documentElement.scrollTo(0, 1)
 				},200)
 				// #endif
+				this.isFocus = true
+				this.scrollToBottom()
 			},
 			blur() {
 				// #ifdef H5
-				document.scrollingElement.scrollTo(0, this.scrollTop);
-				this.$nextTick(() => {
-					this.scrollTop = 9999999
-				})
+				document.scrollingElement.scrollTo(0, 1);
 				// #endif
+				this.isFocus = false
+				this.scrollToBottom()
 			},
 			loginout() {
 				request('/loginout', {}, 'POST').then(res => {
@@ -153,19 +145,62 @@
 						default: that.chatContent
 					}
 				}
-				chatSocket.send({
-					data: JSON.stringify(chat),
-					success: () => {
-						that.chatContent = ''
-					}
-				})
+				if (chatSocket) {
+					chatSocket.send({
+						data: JSON.stringify(chat),
+						success: () => {
+							that.chatContent = ''
+						}
+					})
+				} else {
+					that.initConnect((socket) => {
+						socket.send({
+							data: JSON.stringify(chat),
+							success: () => {
+								that.chatContent = ''
+							}
+						})
+					})
+				}
+				
 			},
 			// 下拉触顶
 			scrolltoupper() {
 			},
 			// 上拉触底
 			scrolltolower() {
+			},
+			// 初始化连接
+			initConnect(fn) {
+				chatSocket = null;
+				socketTask('/user').then(socket => {
+					chatSocket = socket
+					chatSocket.onMessage(this.onMessage)
+					chatSocket.onError(this.onError)
+					chatSocket.onClose(this.closeSocket)
+					return socket
+				}).then(socket => {
+					typeof fn === 'function' && fn(socket)
+				})
+			},
+			scrollToBottom() {
+				this.scrollTop += 300
+			},
+			getNode() {
+				return new Promise(function(resolve, reject){
+					let query = uni.createSelectorQuery().in(this)
+					query.select('#scrollView').boundingClientRect(data => {
+						try {
+							resolve(data)
+						} catch(error) {
+							reject(error)
+						}
+					}).exec();
+				})
 			}
+		},
+		onHide() {
+			this.initConnect()
 		},
 		computed: {
 			isIphoneX() {
@@ -197,6 +232,7 @@
 		border-top: 1upx solid #ebebeb;
 		display: flex;
 		flex-wrap: nowrap;
+		z-index: 3;
 		input{
 			background: #fff;
 			padding: 4upx 15upx;
@@ -204,12 +240,11 @@
 		}
 		.send-chat{
 			margin-left: 15upx;
-			padding: 0;
-			width: 60upx;
 			height: 60upx;
-			line-height: 55upx;
+			line-height: 58upx;
 			text-align: center;
-			border-radius: 50%;
+			font-size: 24upx;
+			border-radius: 8upx;
 		}
 	}
 	.scroll-view{
@@ -277,21 +312,25 @@
 	.other::before{
 		background: #fff;
 		left: -16upx;
+		z-index: 1;
 	}
 	.other::after{
 		left: -16upx;
 		border-radius: 0% 100% 0% 0%;
 		background: #f8f8f8;
+		z-index: 2;
 	}
 	.userself::before{
 		background: #00FF00;
 		right: -16upx;
+		z-index: 1;
 	}
 	.userself::after{
 		background: #fff;
 		right: -16upx;
 		border-radius: 100% 0% 0% 0%;
 		background: #f8f8f8;
+		z-index: 2;
 	}
 }
 .chat-left{

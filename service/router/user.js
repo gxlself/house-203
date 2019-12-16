@@ -11,12 +11,12 @@ let userConnects = new Map()
 
 router
   .ws('/user', function (ws, req){
-    userLogger.trace(`链接ws ====== /user`)
+    let conUser = req.query.authorization.split(',')[1]
+    userLogger.trace(` ${conUser}建立连接 ====== just is connect`)
     ws.on('message', function (msg) {
-      let requestUsername = req.query.authorization.split(',')[1]
+      let requestUsername = conUser
       let getMsg = JSON.parse(msg)
       userConnects.set(requestUsername, ws)
-      // console.log(ws)
       ws.on('close', function(msg) {
         userConnects.set(requestUsername, null)
       })
@@ -89,11 +89,9 @@ const sendUserInfo = function(ws, getMsg) {
 
 const boardcast = function(option) {
   for (let [user, connect] of userConnects) {
-    if (connect.readyState === 1) {
+    if (connect && connect.readyState === 1) {
       connect.send(JSON.stringify(option))
-    } else {
-      console.log('connect', connect)
-    }
+    } 
   }
 }
 

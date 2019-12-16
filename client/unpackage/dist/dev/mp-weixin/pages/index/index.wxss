@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.chat-page.data-v-afa97da8 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+.chat-page .bottom-input.data-v-afa97da8 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10rpx 30rpx;
+    background: #f8f8f8;
+    border-top: 1rpx solid #ebebeb;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    z-index: 3;
+}
+.chat-page .bottom-input input.data-v-afa97da8 {
+      background: #fff;
+      padding: 4rpx 15rpx;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+}
+.chat-page .bottom-input .send-chat.data-v-afa97da8 {
+      margin-left: 15rpx;
+      height: 60rpx;
+      line-height: 58rpx;
+      text-align: center;
+      font-size: 24rpx;
+      border-radius: 8rpx;
+}
+.chat-page .scroll-view.data-v-afa97da8 {
+    height: 100vh;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 80rpx 0rpx;
+}
+.chat-page .scroll-view.iphoneX-content-padding.data-v-afa97da8 {
+      padding-bottom: 140rpx;
+}
+.chat-page .iphoneX.data-v-afa97da8 {
+    padding-bottom: 68rpx;
+}
+.user-chat.data-v-afa97da8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20rpx;
+}
+.user-chat .left-ava.data-v-afa97da8, .user-chat .right-ava.data-v-afa97da8, .user-chat .left-node.data-v-afa97da8, .user-chat .right-node.data-v-afa97da8 {
+    width: 70rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    border-radius: 50%;
+}
+.user-chat .left-ava.data-v-afa97da8, .user-chat .right-ava.data-v-afa97da8 {
+    background: #eee;
+}
+.user-chat .left-node.data-v-afa97da8, .user-chat .right-node.data-v-afa97da8 {
+    background: none;
+}
+.user-chat.data-v-afa97da8 {
+  margin: 24rpx 0;
+}
+.user-chat.data-v-afa97da8:last-child {
+  margin-bottom: 24rpx;
+}
+.chat-content.data-v-afa97da8 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 16rpx;
+}
+.chat-content text.data-v-afa97da8 {
+    font-size: 28rpx;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    background: #fff;
+    padding: 16rpx 20rpx;
+    text-align: justify;
+    border-radius: 8rpx;
+    word-break: break-all;
+}
+.chat-content .other.data-v-afa97da8, .chat-content .userself.data-v-afa97da8 {
+    position: relative;
+}
+.chat-content .userself.data-v-afa97da8 {
+    background: #00FF00;
+}
+.chat-content .other.data-v-afa97da8::before, .chat-content .other.data-v-afa97da8::after, .chat-content .userself.data-v-afa97da8::before, .chat-content .userself.data-v-afa97da8::after {
+    position: absolute;
+    content: '';
+    width: 16rpx;
+    height: 16rpx;
+}
+.chat-content .other.data-v-afa97da8::before {
+    background: #fff;
+    left: -16rpx;
+    z-index: 1;
+}
+.chat-content .other.data-v-afa97da8::after {
+    left: -16rpx;
+    border-radius: 0% 100% 0% 0%;
+    background: #f8f8f8;
+    z-index: 2;
+}
+.chat-content .userself.data-v-afa97da8::before {
+    background: #00FF00;
+    right: -16rpx;
+    z-index: 1;
+}
+.chat-content .userself.data-v-afa97da8::after {
+    background: #fff;
+    right: -16rpx;
+    border-radius: 100% 0% 0% 0%;
+    background: #f8f8f8;
+    z-index: 2;
+}
+.chat-left .chat-content.data-v-afa97da8 {
+  text-align: left;
+}
+.chat-right .chat-content.data-v-afa97da8 {
+  text-align: right;
+}
+

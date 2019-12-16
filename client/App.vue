@@ -1,7 +1,13 @@
 <script>
 	export default {
 		onLaunch: function () {
-			console.log('App onLaunch')
+			let token = uni.getStorageSync('token')
+			let username = uni.getStorageSync('username')
+			if (token && username) {
+				uni.reLaunch({
+					url: 'pages/index/index'
+				})
+			}
 		},
 		onShow: function () {
 			console.log('App Show')
