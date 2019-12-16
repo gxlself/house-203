@@ -6,20 +6,19 @@ var { NOT_ONLINR_STATUS } = require('../config/config');
 var userLogger = require('../utils/log').useLog('user');
 var loginoutLogger = require('../utils/log').useLog('loginout');
 expressWs(router);
-let users = []
-let connections = []
+
+let userConnects = new Map()
+
 router
   .ws('/user', function (ws, req){
     userLogger.trace(`链接ws ====== /user`)
     ws.on('message', function (msg) {
       let requestUsername = req.query.authorization.split(',')[1]
       let getMsg = JSON.parse(msg)
-      if (!users.includes(requestUsername)) {
-        users.push(requestUsername)
-        connections.push(ws)
-      }
+      userConnects.set(requestUsername, ws)
+      // console.log(ws)
       ws.on('close', function(msg) {
-        users.splice(users.indexOf(requestUsername), 1)
+        userConnects.set(requestUsername, null)
       })
       switch(getMsg.type) {
         case 'getUserInfo':
@@ -89,9 +88,13 @@ const sendUserInfo = function(ws, getMsg) {
 }
 
 const boardcast = function(option) {
-  connections.forEach(function(connect) {
-    connect.send(JSON.stringify(option));
-  })
+  for (let [user, connect] of userConnects) {
+    if (connect.readyState === 1) {
+      connect.send(JSON.stringify(option))
+    } else {
+      console.log('connect', connect)
+    }
+  }
 }
 
 module.exports = router;

@@ -7,24 +7,31 @@
 					 @scrolltolower="scrolltolower"
 					 :class="{'iphoneX-content-padding': isIphoneX}"
 					 class="scroll-view"
+					 style="background: #F8F8F8;"
+					 :scroll-top="scrollTop" 
 					 >
-			<view class="user-chat" :class="[{'chat-left': username !== c.from || username !== c.user}, {'chat-right': username === c.from || username === c.user}]" v-for="(c, i) in chats" :key="i">
-				<view class="left-ava">
-					
+			<view class="user-chat" 
+				 :class="[{'chat-left': username !== c.from || username !== c.user}, {'chat-right': username === c.from || username === c.user}]" 
+				 v-for="(c, i) in chats" :key="i">
+				<view class="left-ava" v-if="!(username === c.from || username === c.user)">
+					{{c.from[0]}}
 				</view>
+				<view class="left-node" v-if="username === c.from || username === c.user"></view>
 				<view class="chat-content">
-					<text>
-						{{c.content.default}}
-					</text>
+					<text :class="[
+						{'userself': !(username !== c.from || username !== c.user)},
+						{'other': username !== c.from || username !== c.user}
+					]" v-html="c.content.default"></text>
 				</view>
-				<view class="right-ava">
-					
+				<view class="right-ava" v-if="!(username !== c.from || username !== c.user)">
+					{{username[0]}}
 				</view>
+				<view class="right-node" v-if="username !== c.from || username !== c.user"></view>
 			</view>
 		</scroll-view>
 		<view class="bottom-input" :class="{'iphoneX': isIphoneX}">
 			<input type="text" v-model="chatContent" class="chat-input" @blur="blur" @focus="focus" confirm-type="send" @confirm="sendMessage"/>
-			<button class="send-chat" type="primary">+</button>
+			<!-- <button class="send-chat" type="primary">+</button> -->
 		</view>
 	</view>
 </template>
@@ -40,6 +47,8 @@
 				passwordFoucus: false,
 				chatContent: '',
 				chats: [],
+				users: {},
+				scrollTop: 999
 			}
 		},
 		components: {
@@ -64,6 +73,7 @@
 		},
 		methods: {
 			onMessage(response) {
+				let that = this
 				let message = JSON.parse(response.data)
 				if (message.code === -1) {
 					uni.clearStorageSync()
@@ -75,11 +85,16 @@
 				} else {
 					switch(message.data.type) {
 						case 'groupChat': 
-							console.log(message)
-							this.chats.push(message.data)
+							that.chats.push(message.data)
+							that.$nextTick(() => {
+								setTimeout(() => {
+									that.scrollTop = 9999999
+								}, 100)
+							})
 							break;
 						case 'getUserInfo': 
 							console.log(message.data)
+							let tempUsers = []
 							break;
 					}
 				}
@@ -87,16 +102,25 @@
 			onError(error) {},
 			closeSocket() {},
 			focus() {
+				let that = this
 				// #ifdef H5
 				this.scrollTop = document.scrollingElement.scrollTop;
 				setTimeout(() => {
 					document.scrollingElement.scrollTo(0, uni.getSystemInfoSync().screenHeight)
+					that.$nextTick(() => {
+						setTimeout(() => {
+							that.scrollTop = 9999999
+						}, 100)
+					})
 				},200)
 				// #endif
 			},
 			blur() {
 				// #ifdef H5
 				document.scrollingElement.scrollTo(0, this.scrollTop);
+				this.$nextTick(() => {
+					this.scrollTop = 9999999
+				})
 				// #endif
 			},
 			loginout() {
@@ -191,7 +215,7 @@
 	.scroll-view{
 	  height: 100vh;
 	  box-sizing: border-box;
-	  padding: 80upx 0upx 81upx;
+	  padding: 80upx 0upx;
 	  &.iphoneX-content-padding{
 	  	padding-bottom: 140upx;
 	  }
@@ -204,21 +228,70 @@
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	.left-ava, .right-ava{
-		width: 80upx;
-		height: 80upx;
+	padding: 0 20upx;
+	.left-ava, .right-ava, .left-node, .right-node{
+		width: 70upx;
+		height: 70upx;
+		line-height: 70upx;
+		text-align: center;
 		border-radius: 50%;
+		
+	}
+	.left-ava, .right-ava{
 		background: #eee;
 	}
-	
+	.left-node, .right-node{
+		background: none;
+	}
+}
+.user-chat{
+	margin: 24upx 0;
+}
+.user-chat:last-child{
+	margin-bottom: 24upx;
 }
 .chat-content{
 	flex: 1;
+	margin: 0 16upx;
 	text{
+		font-size: 28upx;
 		display: inline-flex;
-		background: #DD4CB2;
-		padding: 10upx;
+		background: #fff;
+		padding: 16upx 20upx;
+		text-align: justify;
 		border-radius: 8upx;
+		word-break: break-all;
+	}
+	.other, .userself{
+		position: relative;
+	}
+	.userself{
+		background: #00FF00;
+	}
+	.other::before, .other::after, .userself::before,.userself::after{
+		position: absolute;
+		content: '';
+		width: 16upx;
+		height: 16upx;
+	}
+	.other::before{
+		background: #fff;
+		left: -16upx;
+	}
+	.other::after{
+		left: -16upx;
+		border-radius: 0% 100% 0% 0%;
+		background: #f8f8f8;
+	}
+	.userself::before{
+		background: #00FF00;
+		right: -16upx;
+	}
+	.userself::after{
+		background: #fff;
+		right: -16upx;
+		border-radius: 100% 0% 0% 0%;
+		background: #f8f8f8;
 	}
 }
 .chat-left{
