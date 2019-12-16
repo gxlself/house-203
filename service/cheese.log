@@ -215,3 +215,178 @@
 [2019-12-15T16:56:28.680] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
 [2019-12-15T16:56:28.680] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
 [2019-12-15T16:56:28.760] [TRACE] user - 链接ws ====== /user
+[2019-12-15T16:58:40.285] [TRACE] request - 服务开启 port - 2039
+[2019-12-15T16:58:43.437] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T16:58:43.438] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T16:58:43.438] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T16:58:43.438] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T16:58:43.438] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T16:58:43.525] [TRACE] user - 链接ws ====== /user
+[2019-12-15T16:59:12.569] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T16:59:12.570] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T16:59:12.570] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T16:59:12.570] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T16:59:12.570] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T16:59:12.573] [TRACE] user - 链接ws ====== /user
+[2019-12-15T16:59:50.210] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T16:59:50.210] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T16:59:50.210] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T16:59:50.210] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T16:59:50.210] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T16:59:50.220] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:03:39.486] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:03:39.486] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:03:39.486] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:03:39.486] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:03:39.486] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:03:39.488] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:03:41.149] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:03:41.149] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:03:41.149] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:03:41.149] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:03:41.150] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:03:41.152] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:04:22.856] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:04:22.857] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:04:22.857] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:04:22.857] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:04:22.857] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:04:22.859] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:04:32.220] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:04:32.229] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:04:32.229] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:04:32.229] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:04:32.229] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:04:32.229] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:14:05.589] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:14:05.589] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:14:05.589] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:14:05.589] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:14:05.589] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:14:05.599] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:14:05.676] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:14:05.676] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:14:05.676] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:14:05.677] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:14:05.677] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:14:05.678] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:18:27.505] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:18:27.505] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:18:27.505] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:18:27.505] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:18:27.505] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:18:27.508] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:24:32.192] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:24:32.192] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:24:32.192] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:24:32.193] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:24:32.193] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:24:32.196] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:33:24.498] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:33:24.498] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:33:24.498] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:33:24.498] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:33:24.498] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:33:24.498] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:43:38.152] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:43:38.152] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:43:38.152] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:43:38.152] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:43:38.152] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:43:38.154] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:43:38.209] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:43:38.209] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:43:38.209] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:43:38.209] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:43:38.209] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:43:38.211] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:44:27.514] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:44:27.515] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:44:27.515] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:44:27.515] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:44:27.515] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:44:27.516] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:44:28.735] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:44:28.735] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:44:28.735] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:44:28.735] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:44:28.735] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:44:28.740] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:46:35.922] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:46:35.922] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:46:35.922] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:46:35.922] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:46:35.922] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:46:35.924] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:46:36.460] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:46:36.460] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:46:36.460] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:46:36.460] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:46:36.460] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:46:36.463] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:48:28.140] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:48:28.140] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:48:28.140] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:48:28.141] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:48:28.141] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:48:28.143] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:48:28.630] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:48:28.630] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:48:28.630] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:48:28.631] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:48:28.631] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:48:28.632] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:48:46.552] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:48:46.553] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:48:46.553] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:48:46.553] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:48:46.553] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:48:46.555] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:48:46.964] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:48:46.964] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:48:46.964] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:48:46.964] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:48:46.964] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:48:46.967] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:48:51.208] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:48:51.208] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:48:51.208] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:48:51.208] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:48:51.208] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:48:51.210] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:48:51.676] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:48:51.676] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:48:51.676] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:48:51.676] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:48:51.676] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:48:51.679] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:50:50.507] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:50:50.507] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:50:50.507] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:50:50.507] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:50:50.507] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:50:50.509] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:50:51.060] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:50:51.060] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:50:51.060] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:50:51.060] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:50:51.060] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:50:51.062] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:53:20.224] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:53:20.224] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:53:20.224] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-15T17:53:20.224] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-15T17:53:20.224] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-15T17:53:20.226] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:53:20.797] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:53:20.797] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:53:20.797] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:53:20.797] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:53:20.798] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:53:20.801] [TRACE] user - 链接ws ====== /user
+[2019-12-15T17:56:50.075] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-15T17:56:50.075] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-15T17:56:50.075] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 12_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.8(0x17000820) NetType/WIFI Language/zh_CN
+[2019-12-15T17:56:50.075] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4'
+[2019-12-15T17:56:50.075] [INFO] token - 校验token ====== 1Fto5A37eW3C_haB6jw0qR3b5Qixdx2hbxjfNmTwyR4
+[2019-12-15T17:56:50.075] [TRACE] user - 链接ws ====== /user
