@@ -34,21 +34,21 @@ router
     })
   })
   /* 登出 */
-  .post('/loginout', function(req, res, next) {
-    let requestAuthorization = req.headers.authorization.split(',')[0]
-    let requestUsername = req.headers.authorization.split(',')[1]
-    const delDataSql = `DELETE FROM m_token WHERE token='${requestAuthorization}' && username='${requestUsername}'`
-    // 修改在线状态
-    onlineStatusUpdate(NOT_ONLINR_STATUS, requestUsername)
-    // 删除token
-    sqlTodo(delDataSql, result =>{
-      loginoutLogger.trace(`登出-SQL ====== ${delDataSql}`)
-      res.send({code: 0, msg: '退出成功', status: 200});
-    }, err => {
-      loginoutLogger.error(`更改登录状态err ====== ${err.message}`)
-      res.send({code: -1, msg: '退出成功', status: 200});
-    })
-  })
+  // .post('/loginout', function(req, res, next) {
+  //   let requestAuthorization = req.headers.authorization.split(',')[0]
+  //   let requestUsername = req.headers.authorization.split(',')[1]
+  //   const delDataSql = `DELETE FROM m_token WHERE token='${requestAuthorization}' && username='${requestUsername}'`
+  //   // 修改在线状态
+  //   onlineStatusUpdate(NOT_ONLINR_STATUS, requestUsername)
+  //   // 删除token
+  //   sqlTodo(delDataSql, result =>{
+  //     loginoutLogger.trace(`登出-SQL ====== ${delDataSql}`)
+  //     res.send({code: 0, msg: '退出成功', status: 200});
+  //   }, err => {
+  //     loginoutLogger.error(`更改登录状态err ====== ${err.message}`)
+  //     res.send({code: -1, msg: '退出成功', status: 200});
+  //   })
+  // })
   
 const sendChatInfo = function(ws, requestUsername, getMsg) {
   let chatOption = {
@@ -66,12 +66,12 @@ const sendChatInfo = function(ws, requestUsername, getMsg) {
     },
     msg: "发送消息成功"
   }
-  // ws.send(JSON.stringify(chatOption));
-  boardcast(chatOption)
+  boardcast(chatOption, getMsg.groupId)
   chatOption = null;
 }
 const sendUserInfo = function(ws, getMsg) {
   const queryGroupUserSql = `SELECT username, avator FROM m_group WHERE group_id = ${getMsg.groupId}`
+  userLogger.trace(`群用户信息-SQL ====== ${queryGroupUserSql}`)
   queryTodo(queryGroupUserSql).then(res => {
     let userOption = {
       code: 0,
@@ -87,7 +87,7 @@ const sendUserInfo = function(ws, getMsg) {
   })
 }
 
-const boardcast = function(option) {
+const boardcast = function(option, groupId) {
   for (let [user, connect] of userConnects) {
     if (connect && connect.readyState === 1) {
       connect.send(JSON.stringify(option))

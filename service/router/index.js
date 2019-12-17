@@ -4,6 +4,7 @@ var router = express.Router();
 var md5 = require('md5');
 var { sqlTodo, onlineStatusUpdate } = require('../utils/sql') 
 var jwt = require('jsonwebtoken');
+var { createToken, verify } = require('../utils/jwt')
 var { sign, ONLINE_STATUS } = require('../config/config')
 var loginLogger = require('../utils/log').useLog('login')
 var registerLogger = require('../utils/log').useLog('register')
@@ -23,21 +24,22 @@ router
       } else {
         const currentUser = results[0]
         // 生成token 并进行存取
-        jwt.sign({username: currentUser.o_username}, sign, function(err, token) {
-          const t = token.split('.')
-          const queryToken = `SELECT username FROM m_token WHERE username='${currentUser.o_username}'`
-          loginLogger.trace(`登录查找token-SQL ====== ${queryToken}`)
-          sqlTodo(queryToken, results => {
-            if (results.length == 0) {
-              saveToToken(token, t[2], currentUser.o_username, res)
-            } else {
-              updateToken(token, t[2], currentUser.o_username, res)
-            }
-          }, err => {
-            loginLogger.error(`登录查找token ====== ${err.message || '数据库错误， 请稍候再试'}`)
-            res.send({code: -2, msg: '数据库错误， 请稍候再试', status: 200});
-          })
-        })
+        // jwt.sign({username: currentUser.o_username}, sign, function(err, token) {
+        //   const t = token.split('.')
+        //   const queryToken = `SELECT username FROM m_token WHERE username='${currentUser.o_username}'`
+        //   loginLogger.trace(`登录查找token-SQL ====== ${queryToken}`)
+        //   sqlTodo(queryToken, results => {
+        //     if (results.length === 0) {
+        //       saveToToken(token, t[2], currentUser.o_username, res)
+        //     } else {
+        //       updateToken(token, t[2], currentUser.o_username, res)
+        //     }
+        //   }, err => {
+        //     loginLogger.error(`登录查找token ====== ${err.message || '数据库错误， 请稍候再试'}`)
+        //     res.send({code: -2, msg: '数据库错误， 请稍候再试', status: 200});
+        //   })
+        // })
+        checkTokenInvalid(currentUser.o_username, sign, res)
       }
     }, err => {
       loginLogger.error(`登录出错-SQL ====== ${queryLoginSql}`)
@@ -73,6 +75,28 @@ router
       res.send({code: 2, msg: '数据库查询错误', status: 200});
     })
   })
+// 校验token值 有效期直接返回 否则重新生成
+function checkTokenInvalid(username, sign, res) {
+  return new Promise((resolve, reject) => {
+    const queryToken = `SELECT * FROM m_token WHERE username='${username}'`
+    loginLogger.trace(`登录查找token-SQL ====== ${queryToken}`)
+    sqlTodo(queryToken, function(results) {
+      if (results.length === 0) {
+        let token = createToken({ username }, sign);
+        const t = token.split('.')
+        // saveToToken(token, t[2], username, res);
+      } else {
+        verify(results[0].a_token).then(ver => {
+          console.log(ver)
+        })
+        // updateToken(token, t[2], username, res);
+      }
+      resolve(true)
+    }, function(err) {
+      reject(err)
+    })
+  })
+}
 // 注册的用户进行存储
 function saveUserInfo(md5User, md5Pass, username, password, loginStatus = 1, res, token) {
   const saveUserInfoSql = `INSERT INTO m_users VALUES('${md5User}', '${md5Pass}', '${username}', '${password}', ${loginStatus})`

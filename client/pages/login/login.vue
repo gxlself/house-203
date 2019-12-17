@@ -44,6 +44,7 @@
 				passwordFoucus: false,
 				username: '',
 				password: '',
+				isClick: false,
 			}
 		},
 		components: {
@@ -78,6 +79,8 @@
 					username: this.username,
 					password: this.password
 				}
+				if (this.isClick) return;
+				this.isClick = true
 				login('/login', option).then(res => {
 					if (res.code === 0) {
 						uni.showToast({ icon: 'loading', title: '登录成功', duration:1000 , mask: true})
@@ -85,6 +88,7 @@
 						uni.setStorageSync('username', res.data.username)
 						let timer = setTimeout(() => {
 							clearTimeout(timer)
+							this.isClick = false
 							uni.reLaunch({ url: '../index/index' })
 						}, 1000)
 					} else {

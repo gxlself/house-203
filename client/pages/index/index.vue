@@ -18,11 +18,11 @@
 					{{ username !== c.user ? c.from[0] : ''}}
 				</view>
 				<view class="chat-content">
+					<view class="chat-nick">{{c.user}}</view>
 					<text :class="[
-						{'userself': !(username !== c.from || username !== c.user)},
-						{'other': username !== c.from || username !== c.user}
-					]" v-html="c.content.default">
-					</text>
+								{'userself': !(username !== c.from || username !== c.user)},
+								{'other': username !== c.from || username !== c.user}
+							]" v-html="c.content.default"></text>
 				</view>
 				<view :class="[{'right-ava': username === c.user}, {'right-node': username !== c.from}]">
 					{{ username === c.user ? c.from[0] : ''}}
@@ -50,7 +50,8 @@
 				chats: [],
 				users: {},
 				scrollTop: 1000,
-				isFocus: false
+				isFocus: false,
+				groupId: 1
 			}
 		},
 		components: {
@@ -89,6 +90,7 @@
 						case 'getUserInfo': 
 							console.log(message.data)
 							let tempUsers = []
+							uni.setStorageSync(`group-${this.groupId}`, message.data)
 							break;
 					}
 				}
@@ -106,29 +108,22 @@
 				},200)
 				// #endif
 				this.isFocus = true
-				this.scrollToBottom()
+				// this.scrollToBottom()
 			},
 			blur() {
 				// #ifdef H5
 				document.scrollingElement.scrollTo(0, 1);
 				// #endif
 				this.isFocus = false
-				this.scrollToBottom()
+				// this.scrollToBottom()
 			},
 			loginout() {
-				request('/loginout', {}, 'POST').then(res => {
-					if (res.code === 0) {
-						uni.clearStorageSync()
-						uni.showToast({ title: '登出成功', icon: 'loading', mask: true })
-						let timer = setTimeout(() => {
-							clearTimeout(timer)
-							uni.reLaunch({ url: '../login/login' })
-						}, 1000)
-					} else {
-						uni.clearStorageSync()
-						uni.reLaunch({ url: '../login/login' })
-					}
-				})
+				ni.clearStorageSync()
+				uni.showToast({ title: '登出成功', icon: 'loading', mask: true })
+				let timer = setTimeout(() => {
+					clearTimeout(timer)
+					uni.reLaunch({ url: '../login/login' })
+				}, 1000)
 			},
 			sendMessage() {
 				const that = this
@@ -138,8 +133,8 @@
 				}
 				let chat = {
 					type: "groupChat",
-					groupId: 1,
-					user: this.username,
+					groupId: that.groupId,
+					user: that.username,
 					content: {
 						type: "text",
 						default: that.chatContent
@@ -296,6 +291,13 @@
 		text-align: justify;
 		border-radius: 8upx;
 		word-break: break-all;
+		transform: translateY(-12upx);
+	}
+	.chat-nick{
+		color: #888;
+		font-size: 24upx;
+		padding: 5upx 0;
+		transform: translateY(-12upx);
 	}
 	.other, .userself{
 		position: relative;

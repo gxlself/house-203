@@ -1,18 +1,21 @@
 const jwt = require('jsonwebtoken');
+var { sign } = require('../config/config')
 
 const createToken = (content, secretOrPrivateKey) => {
   return jwt.sign(content, secretOrPrivateKey, {
-    expiresIn: 60 * 60 * 24  // 24小时过期
+    expiresIn: 60 * 60 * 24 * 2  // 48小时过期
   }) 
 }
 
-const verify = (token, secretOrPublicKey, next) => {
-  return jwt.verify(token, secretOrPublicKey, (err, decode) => {
-    if (err) {
-      next({ code: -1, errMsg: err})
-    } else {
-      next({ code: 0 })
-    }
+const verify = (token) => {
+  return new Promise(function(resolve, reject) {
+    jwt.verify(token, sign, (err, decode) => {
+      if (err) {
+        reject(false)
+      } else {
+        resolve(true)
+      }
+    })
   })
 }
 

@@ -82,6 +82,9 @@ const socketTask = function(url) {
 		socket.onOpen(() => {
 			resolve(socket)
 		})
+		socket.onError(() => {
+			socketTask(url).then(() => {})
+		})
 	})
 }
 module.exports = {

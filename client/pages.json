@@ -8,6 +8,8 @@
             "path" : "pages/register/register"
         },{
             "path" : "pages/find-password/find-password"
+        },{
+            "path" : "pages/chat-list/chat-list"
         }
     ],
 	"globalStyle": {
