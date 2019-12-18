@@ -105,7 +105,10 @@ function boardcast(option, groupId) {
   for (let [user, connect] of userConnects) {
     if (connect && connect.readyState === 1) {
       connect.send(JSON.stringify(option))
-    } 
+    } else {
+      // 开始存入离线聊天信息队列
+      // saveNoOnlineInfo()
+    }
   }
 }
 
