@@ -35,10 +35,10 @@ router
           }
           switch(getMsg.type) {
             case 'getUserInfo':
-              sendUserInfo(ws, getMsg)
+              sendUserInfo(userConnects.get(requestUsername), getMsg)
               break;
             case 'groupChat':
-              sendChatInfo(ws, requestUsername, getMsg)
+              sendChatInfo(requestUsername, getMsg)
               break;
             default: 
               console.log('-----default----')
@@ -63,7 +63,7 @@ function checkConnectState(username) {
   })
 }
 // 发送聊天信息
-function sendChatInfo(ws, requestUsername, getMsg) {
+function sendChatInfo(requestUsername, getMsg) {
   let chatOption = {
     code: 0,
     data: {
