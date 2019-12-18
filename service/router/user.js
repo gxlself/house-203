@@ -1,10 +1,8 @@
 var express = require('express');
 var expressWs = require('express-ws');
 var router = express.Router();
-var { sqlTodo, onlineStatusUpdate, queryTodo } = require('../utils/sql') ;
-var { NOT_ONLINR_STATUS } = require('../config/config');
+var { queryTodo } = require('../utils/sql') ;
 var userLogger = require('../utils/log').useLog('user');
-var loginoutLogger = require('../utils/log').useLog('loginout');
 expressWs(router);
 
 let userConnects = new Map()
@@ -13,44 +11,59 @@ router
   .ws('/user', function (ws, req){
     let conUser = req.query.authorization.split(',')[1]
     userLogger.trace(` ${conUser}建立连接 ====== just is connect`)
+    // 解除10个监听的警告
+    ws.setMaxListeners(0)
+    // console.log('getMaxListeners is ', ws.getMaxListeners())
+    // console.log('ws.listenerCount is ', ws.listenerCount())
+    // console.log('ws.listeners is ', ws.listeners())
     ws.on('message', function (msg) {
       let requestUsername = conUser
       let getMsg = JSON.parse(msg)
-      userConnects.set(requestUsername, ws)
-      ws.on('close', function(msg) {
-        userConnects.set(requestUsername, null)
-      })
-      switch(getMsg.type) {
-        case 'getUserInfo':
-          sendUserInfo(ws, getMsg)
-          break;
-        case 'groupChat':
-          sendChatInfo(ws, requestUsername, getMsg)
-          break;
-        default: 
-          console.log('-----default----')
-          break;
-      }
+      // 给连接的人发送消息
+      checkConnectState(requestUsername)
+        .then(connect => {
+          if (!connect) {
+            userConnects.set(requestUsername, ws)
+            ws.on('close', function(msg) {
+              userConnects.set(requestUsername, null)
+            })
+          } else {
+            ws.off()
+            ws.removeAllListeners()
+            ws = null;
+            // 给不在连接状态的人进行消息队列保存 以便上线后进行信息推送
+          }
+          switch(getMsg.type) {
+            case 'getUserInfo':
+              sendUserInfo(ws, getMsg)
+              break;
+            case 'groupChat':
+              sendChatInfo(ws, requestUsername, getMsg)
+              break;
+            default: 
+              console.log('-----default----')
+              break;
+          }
+        })
     })
   })
-  /* 登出 */
-  // .post('/loginout', function(req, res, next) {
-  //   let requestAuthorization = req.headers.authorization.split(',')[0]
-  //   let requestUsername = req.headers.authorization.split(',')[1]
-  //   const delDataSql = `DELETE FROM m_token WHERE token='${requestAuthorization}' && username='${requestUsername}'`
-  //   // 修改在线状态
-  //   onlineStatusUpdate(NOT_ONLINR_STATUS, requestUsername)
-  //   // 删除token
-  //   sqlTodo(delDataSql, result =>{
-  //     loginoutLogger.trace(`登出-SQL ====== ${delDataSql}`)
-  //     res.send({code: 0, msg: '退出成功', status: 200});
-  //   }, err => {
-  //     loginoutLogger.error(`更改登录状态err ====== ${err.message}`)
-  //     res.send({code: -1, msg: '退出成功', status: 200});
-  //   })
-  // })
-  
-const sendChatInfo = function(ws, requestUsername, getMsg) {
+// 判断当前连接对象是否还连接状态
+function checkConnectState(username) {
+  return new Promise((resolve, reject) => {
+    try{
+      let curConnect =  userConnects.get(username);
+      if (curConnect) {
+        resolve( curConnect.readyState === curConnect.CLOSED || curConnect.readyState === curConnect.CLOSING )
+      } else {
+        resolve(false)
+      }
+    } catch(e) {
+      reject(e)
+    }
+  })
+}
+// 发送聊天信息
+function sendChatInfo(ws, requestUsername, getMsg) {
   let chatOption = {
     code: 0,
     data: {
@@ -69,7 +82,8 @@ const sendChatInfo = function(ws, requestUsername, getMsg) {
   boardcast(chatOption, getMsg.groupId)
   chatOption = null;
 }
-const sendUserInfo = function(ws, getMsg) {
+// 发送用户信息
+function sendUserInfo(ws, getMsg) {
   const queryGroupUserSql = `SELECT username, avator FROM m_group WHERE group_id = ${getMsg.groupId}`
   userLogger.trace(`群用户信息-SQL ====== ${queryGroupUserSql}`)
   queryTodo(queryGroupUserSql).then(res => {
@@ -86,8 +100,8 @@ const sendUserInfo = function(ws, getMsg) {
     userOption = null;
   })
 }
-
-const boardcast = function(option, groupId) {
+// 信息分发
+function boardcast(option, groupId) {
   for (let [user, connect] of userConnects) {
     if (connect && connect.readyState === 1) {
       connect.send(JSON.stringify(option))

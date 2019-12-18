@@ -2,19 +2,6 @@ const mysql = require('mysql');
 const { sql } = require('../config/config')
 const onlineLogger = require('./log').useLog('online')
 // 查询
-const sqlTodo = function(sqlSentence, success, fail) {
-  // 实例连接数据库
-  const connection = mysql.createConnection(sql)
-  connection.connect();
-  connection.query(sqlSentence, function (error, results, fields) {
-    if (error) {
-      typeof fail === 'function' && fail(error)
-    } else {
-      typeof success === 'function' && success(results, fields)
-    }
-    connection.end();
-  });
-}
 const queryTodo = function(sqlSentence) {
   return new Promise(function(resolve, reject) {
     // 实例连接数据库
@@ -41,7 +28,6 @@ const onlineStatusUpdate = function(status, username) {
 }
 
 module.exports = {
-  sqlTodo,
   onlineStatusUpdate,
   queryTodo
 }

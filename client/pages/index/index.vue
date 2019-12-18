@@ -118,7 +118,7 @@
 				// this.scrollToBottom()
 			},
 			loginout() {
-				ni.clearStorageSync()
+				uni.clearStorageSync()
 				uni.showToast({ title: '登出成功', icon: 'loading', mask: true })
 				let timer = setTimeout(() => {
 					clearTimeout(timer)

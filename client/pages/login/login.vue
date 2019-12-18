@@ -61,14 +61,15 @@
 				uni.navigateTo({ url: '../find-password/find-password' })
 			},
 			loginSubmit() {
-				if (!this.username) {
+				let that = this
+				if (!that.username) {
 					uni.showToast({
 						title: '请输入账号',
 						icon: 'none'
 					})
 					return
 				}
-				if (!this.password) {
+				if (!that.password) {
 					uni.showToast({
 						title: '请输入密码',
 						icon: 'none'
@@ -76,25 +77,31 @@
 					return
 				}
 				let option = {
-					username: this.username,
-					password: this.password
+					username: that.username,
+					password: that.password
 				}
-				if (this.isClick) return;
-				this.isClick = true
-				login('/login', option).then(res => {
-					if (res.code === 0) {
-						uni.showToast({ icon: 'loading', title: '登录成功', duration:1000 , mask: true})
-						uni.setStorageSync('token', res.data.token)
-						uni.setStorageSync('username', res.data.username)
-						let timer = setTimeout(() => {
-							clearTimeout(timer)
-							this.isClick = false
-							uni.reLaunch({ url: '../index/index' })
-						}, 1000)
-					} else {
-						uni.showToast({ icon: 'none', title: res.msg })
-					}
-				})
+				if (that.isClick) return;
+				that.isClick = true
+				login('/login', option)
+					.then(res => {
+						if (res.code === 0) {
+							that.isClick = false
+							uni.showToast({ icon: 'loading', title: '登录成功', duration:1000 , mask: true})
+							uni.setStorageSync('token', res.data.token)
+							uni.setStorageSync('username', res.data.username)
+							let timer = setTimeout(() => {
+								clearTimeout(timer)
+								uni.reLaunch({ url: '../index/index' })
+							}, 1000)
+						} else {
+							that.isClick = false
+							uni.showToast({ icon: 'none', title: res.msg })
+						}
+					})
+					.catch(error => {
+						that.isClick = false
+						uni.showToast({ icon: 'none', title: error.message })
+					})
 			}
 		}
 	}

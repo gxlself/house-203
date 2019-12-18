@@ -1,7 +1,6 @@
 var express = require('express');
-var jwt = require('jsonwebtoken');
-var { sqlTodo } = require('./utils/sql')
-var { sign } = require('./config/config')
+var { queryTodo } = require('./utils/sql')
+var { verify } = require('./utils/jwt')
 var log4js = require("./utils/log");
 
 // 引入各个接口需要的文件
@@ -61,44 +60,46 @@ app.use(function (req, res, next) {
   reqLog.trace(`请求进入user-agent ===== ${req.headers['user-agent']}`)
   tokenLog.info(`登录SQL执行 ====== ${sqlLog}`)
   tokenLog.info(`校验token ====== ${requestAuthorization}`)
-  sqlTodo(sqlLog, (result, fields) => {
-    if (result.length <= 0) {
-      if (isSocket) {
-        req.ws.send(`{"code":-1,"msg":"无效token"}`);
-      } else {
-        res.send({code: -1, msg: '无效token', status: 401});
-      }
-    } else{
-      const token = result[0].a_token
-      const username = result[0].username
-      jwt.verify(token, sign, (err, decoded) => {
-        //当token验证失败时会抛出如下错误
-        if (err) {
-          if (isSocket) {
-            req.ws.send(`{"code":-1,"msg":"token失效"}`);
-          } else {
-            res.send({code: -1, msg: 'token失效', status: 401});
-          }
+
+  queryTodo(sqlLog)
+    .then(result => {
+      if (result.length <= 0) {
+        if (isSocket) {
+          req.ws.send(`{"code":-1,"msg":"无效token"}`);
         } else {
-          if (username === requestUsername) {
-            next()
-          } else {
-            if (isSocket) {
-              req.ws.send(`{"code":-1,"msg":"无效token"}`);
-            } else {
-              res.send({code: -1, msg: '无效token', status: 401});
-            }
-          }
+          res.send({code: -1, msg: '无效token', status: 401});
         }
-      })
-    }
-  }, error => {
-    tokenLog.error(`校验token ====== ${error.manage || '数据库查询错误'}`)
-    if (!isSocket) {
-      res.send({code: -2, msg: '数据库查询错误-token', status: 401});
-      return
-    }
-  })
+      } else{
+        const token = result[0].a_token
+        const username = result[0].username
+        verify(token)
+          .then(decode => {
+            if (username === decode.username) {
+              next()
+            } else {
+              if (isSocket) {
+                req.ws.send(`{"code":-1,"msg":"无效token"}`);
+              } else {
+                res.send({code: -1, msg: '无效token', status: 401});
+              }
+            }
+          })
+          .catch(err => {
+            if (isSocket) {
+              req.ws.send(`{"code":-1,"msg":"token失效"}`);
+            } else {
+              res.send({code: -1, msg: 'token失效', status: 401});
+            }
+          })
+      }
+    })
+    .catch(err => {
+      tokenLog.error(`校验token ====== ${error.manage || '数据库查询错误'}`)
+      if (!isSocket) {
+        res.send({code: -2, msg: '数据库查询错误-token', status: 401});
+        return
+      }
+    })
 });
 // 有拦截器后的路由注入
 app.use('/', user)
