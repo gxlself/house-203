@@ -410,3 +410,205 @@
 [2019-12-18T18:56:14.078] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
 [2019-12-18T18:56:14.088] [TRACE] user -  test1建立连接 ====== just is connect
 [2019-12-18T18:56:14.146] [TRACE] user - 群用户信息-SQL ====== SELECT username, avator FROM m_group WHERE group_id = 1
+[2019-12-18T19:47:45.135] [TRACE] request - 服务开启 port - 2039
+[2019-12-18T19:47:45.241] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T19:47:45.241] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T19:47:45.241] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T19:47:45.241] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T19:47:45.241] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T19:47:46.662] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T19:47:50.167] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T19:47:50.167] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T19:47:50.167] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T19:47:50.167] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T19:47:50.168] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T19:47:50.176] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T19:48:55.528] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T19:48:55.528] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T19:48:55.528] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T19:48:55.528] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T19:48:55.528] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T19:48:55.533] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T21:47:53.807] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T21:47:53.807] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T21:47:53.807] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T21:47:53.808] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T21:47:53.808] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T21:47:53.815] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T21:57:40.481] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T21:57:40.481] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T21:57:40.481] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T21:57:40.481] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T21:57:40.481] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T21:57:40.486] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:09:04.753] [TRACE] request - 服务开启 port - 2039
+[2019-12-18T22:09:04.912] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:09:04.912] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:09:04.913] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:09:04.913] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:09:04.913] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:09:06.123] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:09:06.124] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:09:06.124] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:09:06.124] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:09:06.124] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:09:06.139] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:09:06.142] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:09:06.142] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:09:06.142] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:09:06.142] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:09:06.142] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:09:06.145] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:09:06.147] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:09:06.154] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:09:06.154] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:09:06.154] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:09:06.154] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:09:06.154] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:09:06.157] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:09:06.168] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:09:06.168] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:09:06.168] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:09:06.168] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:09:06.168] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:09:06.170] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:09:06.181] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:09:06.181] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:09:06.181] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:09:06.181] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:09:06.181] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:09:06.183] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:09:06.201] [TRACE] user - 群用户信息-SQL ====== SELECT username, avator FROM m_group WHERE group_id = 1
+[2019-12-18T22:09:23.219] [ERROR] chat - gxlself发送消息失败 ====== ER_BAD_FIELD_ERROR: Unknown column 'from_user' in 'field list'
+[2019-12-18T22:10:28.373] [TRACE] request - 服务开启 port - 2039
+[2019-12-18T22:10:28.891] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:10:28.891] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:10:28.891] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:10:28.891] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:10:28.891] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:10:28.995] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:10:39.743] [ERROR] chat - gxlself发送消息失败 ====== ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: 'groupChat' for column 'chat_type' at row 1
+[2019-12-18T22:10:44.217] [ERROR] chat - gxlself发送消息失败 ====== ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: 'groupChat' for column 'chat_type' at row 1
+[2019-12-18T22:12:09.656] [TRACE] request - 服务开启 port - 2039
+[2019-12-18T22:12:10.125] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:12:10.131] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:12:10.131] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:12:10.131] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:12:10.131] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:12:10.255] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:12:12.595] [ERROR] chat - gxlself发送消息失败 ====== ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: 'groupChat' for column 'chat_type' at row 1
+[2019-12-18T22:13:13.350] [TRACE] request - 服务开启 port - 2039
+[2019-12-18T22:13:13.559] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:13:13.559] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:13:13.559] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:13:13.559] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:13:13.559] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:13:13.683] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:13:23.594] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:13:23.594] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:13:23.594] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:13:23.595] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:13:23.595] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:13:23.605] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:13:23.655] [TRACE] chat - gxlself发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('gxlself', '', 'groupChat', '你好啊', 'text', 1, 1576678403653)
+[2019-12-18T22:13:23.670] [ERROR] chat - gxlself发送消息失败 ====== ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: 'groupChat' for column 'chat_type' at row 1
+[2019-12-18T22:18:58.659] [TRACE] request - 服务开启 port - 2039
+[2019-12-18T22:18:59.001] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:18:59.001] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:18:59.001] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:18:59.001] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:18:59.004] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:18:59.135] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:19:03.834] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:19:03.834] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:19:03.834] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:19:03.835] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:19:03.835] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:19:03.844] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:19:03.868] [TRACE] chat - gxlself发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('gxlself', '', 'groupChat', '我的文档', 'text', 1, Wed Dec 18 2019 22:19:03 GMT+0800 (中国标准时间))
+[2019-12-18T22:19:03.910] [ERROR] chat - gxlself发送消息失败 ====== ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Dec 18 2019 22:19:03 GMT+0800 (中国标准时间))' at line 1
+[2019-12-18T22:22:44.371] [TRACE] request - 服务开启 port - 2039
+[2019-12-18T22:22:44.771] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:22:44.771] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:22:44.771] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:22:44.771] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:22:44.771] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:22:44.893] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:22:57.065] [TRACE] chat - gxlself发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('gxlself', '', 'groupChat', '礼好啊', 'text', 1, function () {
+  let d = new Date()
+  let year = d.getFullYear()
+  let mon = checkSingle(d.getMonth() + 1)
+  let day = checkSingle(d.getDate())
+  let hour = checkSingle(d.getHours())
+  let min = checkSingle(d.getMinutes())
+  let sec = checkSingle(d.getSeconds())
+
+  return `${year}-${mon}-${day} ${hour}:${min}:${sec}`
+})
+[2019-12-18T22:22:57.083] [ERROR] chat - gxlself发送消息失败 ====== ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '() {
+  let d = new Date()
+  let year = d.getFullYear()
+  let mon = checkSingl' at line 1
+[2019-12-18T22:23:05.824] [TRACE] chat - gxlself发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('gxlself', '', 'groupChat', '我是香港话了', 'text', 1, function () {
+  let d = new Date()
+  let year = d.getFullYear()
+  let mon = checkSingle(d.getMonth() + 1)
+  let day = checkSingle(d.getDate())
+  let hour = checkSingle(d.getHours())
+  let min = checkSingle(d.getMinutes())
+  let sec = checkSingle(d.getSeconds())
+
+  return `${year}-${mon}-${day} ${hour}:${min}:${sec}`
+})
+[2019-12-18T22:23:05.828] [ERROR] chat - gxlself发送消息失败 ====== ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '() {
+  let d = new Date()
+  let year = d.getFullYear()
+  let mon = checkSingl' at line 1
+[2019-12-18T22:23:26.867] [TRACE] request - 服务开启 port - 2039
+[2019-12-18T22:23:27.288] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:23:27.288] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:23:27.288] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:23:27.288] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:23:27.288] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:23:27.378] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:23:41.124] [TRACE] chat - gxlself发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('gxlself', '', 'groupChat', '列好啊', 'text', 1, 'function () {
+  let d = new Date()
+  let year = d.getFullYear()
+  let mon = checkSingle(d.getMonth() + 1)
+  let day = checkSingle(d.getDate())
+  let hour = checkSingle(d.getHours())
+  let min = checkSingle(d.getMinutes())
+  let sec = checkSingle(d.getSeconds())
+
+  return `${year}-${mon}-${day} ${hour}:${min}:${sec}`
+}')
+[2019-12-18T22:23:41.144] [ERROR] chat - gxlself发送消息失败 ====== ER_TRUNCATED_WRONG_VALUE: Incorrect datetime value: 'function () {
+  let d = new Date()
+  let year = d.getFullYear()
+  let mon = checkSingle(d.getMonth() + 1)
+  let day = checkS' for column 'timestamp' at row 1
+[2019-12-18T22:23:50.775] [TRACE] chat - gxlself发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('gxlself', '', 'groupChat', '这里是自由聊天室啊', 'text', 1, 'function () {
+  let d = new Date()
+  let year = d.getFullYear()
+  let mon = checkSingle(d.getMonth() + 1)
+  let day = checkSingle(d.getDate())
+  let hour = checkSingle(d.getHours())
+  let min = checkSingle(d.getMinutes())
+  let sec = checkSingle(d.getSeconds())
+
+  return `${year}-${mon}-${day} ${hour}:${min}:${sec}`
+}')
+[2019-12-18T22:23:50.777] [ERROR] chat - gxlself发送消息失败 ====== ER_TRUNCATED_WRONG_VALUE: Incorrect datetime value: 'function () {
+  let d = new Date()
+  let year = d.getFullYear()
+  let mon = checkSingle(d.getMonth() + 1)
+  let day = checkS' for column 'timestamp' at row 1
+[2019-12-18T22:24:47.945] [TRACE] request - 服务开启 port - 2039
+[2019-12-18T22:24:48.024] [TRACE] request - 请求进入host ===== 192.168.0.106:2039
+[2019-12-18T22:24:48.025] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-18T22:24:48.025] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-18T22:24:48.025] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU'
+[2019-12-18T22:24:48.025] [INFO] token - 校验token ====== 1Fzqae1Yo67Klpz2SuWqd-IbPO4CAMt6omsqMJkcFRU
+[2019-12-18T22:24:48.129] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-18T22:24:57.035] [TRACE] chat - gxlself发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('gxlself', '', 'groupChat', '有傻逼了', 'text', 1, '2019-12-18 22:24:47')
+[2019-12-18T22:25:11.445] [TRACE] chat - gxlself发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('gxlself', '', 'groupChat', '有内鬼  终止交易', 'text', 1, '2019-12-18 22:24:47')

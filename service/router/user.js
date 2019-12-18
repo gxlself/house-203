@@ -2,7 +2,9 @@ var express = require('express');
 var expressWs = require('express-ws');
 var router = express.Router();
 var { queryTodo } = require('../utils/sql') ;
+var { currentTime } = require('../utils/utils')
 var userLogger = require('../utils/log').useLog('user');
+var chatLogger = require('../utils/log').useLog('chat');
 expressWs(router);
 
 let userConnects = new Map()
@@ -64,6 +66,13 @@ function checkConnectState(username) {
 }
 // 发送聊天信息
 function sendChatInfo(requestUsername, getMsg) {
+  const userChatSql = `INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('${requestUsername}', '', '${getMsg.type}', '${getMsg.content.default}', '${getMsg.content.type}', ${getMsg.groupId}, '${currentTime}')`
+  chatLogger.trace(`${requestUsername}发送消息成功SQL ====== ${userChatSql}`)
+  queryTodo(userChatSql)
+    .catch(err => {
+      chatLogger.error(`${requestUsername}发送消息失败 ====== ${err.message}`)
+    })
+
   let chatOption = {
     code: 0,
     data: {
@@ -75,7 +84,7 @@ function sendChatInfo(requestUsername, getMsg) {
         type: getMsg.content.type,
         default: getMsg.content.default
       },
-      timerstamp: new Date().getTime()
+      timerstamp: currentTime
     },
     msg: "发送消息成功"
   }
