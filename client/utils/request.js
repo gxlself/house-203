@@ -7,6 +7,7 @@ const request = function(url, data = {}, method = 'GET') {
 		if (!token || !username) {
 			uni.clearStorageSync()
 			uni.reLaunch({ url: '../../pages/login/login' })
+			reject(new Error('token失效'))
 			return
 		}
 		uni.request({
@@ -17,10 +18,12 @@ const request = function(url, data = {}, method = 'GET') {
 				"authorization": `${token},${username}`
 			},
 			success(response) {
-				if (response.data.status === 400 || response.data.status === 401 || response.data.status === 403) {
+				console.log(response.data.status === 200)
+				if (response.statusCode === 401) {
 					uni.clearStorageSync()
 					uni.reLaunch({ url: '../../pages/login/login' })
-				} else if (response.data.status === 200) {
+					reject(new Error('token失效'))
+				} else if (response.statusCode === 200) {
 					resolve(response.data)
 				}
 				uni.hideLoading();

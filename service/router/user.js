@@ -10,14 +10,11 @@ expressWs(router);
 let userConnects = new Map()
 
 router
-  .ws('/user', function (ws, req){
+  .ws('/user', function(ws, req) {
     let conUser = req.query.authorization.split(',')[1]
     userLogger.trace(` ${conUser}建立连接 ====== just is connect`)
     // 解除10个监听的警告
     ws.setMaxListeners(0)
-    // console.log('getMaxListeners is ', ws.getMaxListeners())
-    // console.log('ws.listenerCount is ', ws.listenerCount())
-    // console.log('ws.listeners is ', ws.listeners())
     ws.on('message', function (msg) {
       let requestUsername = conUser
       let getMsg = JSON.parse(msg)
@@ -49,6 +46,60 @@ router
         })
     })
   })
+  .post('/user/chatlist', function(req, res) {
+    const option = req.body
+    const queryCacheChatSql = `SELECT * FROM m_cache_chat WHERE group_id=${option.groupId} ORDER BY TIMESTAMP DESC LIMIT ${(option.page - 1) * option.size}, ${option.page * option.size};`
+    const queryCountSql = `SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=${option.groupId};`
+    chatLogger.trace(`查询聊天记录(${option.chatType}-groupId is ${option.groupId ? option.groupId : ''})-SQL ====== ${queryCacheChatSql}`)
+    chatLogger.trace(`查询聊天记录数量-SQL ====== ${queryCountSql}`)
+    Promise.all([queryTodo(queryCacheChatSql), queryTodo(queryCountSql)])
+      .then(values => {
+        let chatList = values[0].map(chat => {
+          let newChatObj = {
+            type: chat.chat_type,
+            groupId: chat.group_id,
+            from: chat.from_user,
+            content: {
+              type: chat.chat_content_type,
+              default: chat.chat_content.toString()
+            },
+            timerstamp: chat.timerstamp
+          }
+          return newChatObj
+        })
+        res.send({
+          code: 0,
+          data: {
+            chats: chatList.reverse(),
+            count: values[1][0].COUNT
+          },
+          msg: '查询成功'
+        })
+      })
+      .catch(error => {
+        res.send({ code: -1, data: null, msg: error.message})
+      })
+  })
+  .ws('/game', function(ws, req) {
+    let conUser = req.query.authorization.split(',')[1]
+    let gameConnects = new Map()
+    ws.on('message', function(a, b, c) {
+      console.log('a ', a)
+      console.log('b ', b)
+      console.log('c ', c)
+      gameConnects.set(conUser, ws)
+      let count = 0
+      for (let [user, gamer] in gameConnects) {
+        let inter = setInterval(() => {
+          if (count > 15) {
+            clearInterval(inter)
+          }
+          count++
+          gamer.send(`{"code": 1, "data": "123456"}`)
+        }, 1000);
+      }
+    })
+  })
 // 判断当前连接对象是否还连接状态
 function checkConnectState(username) {
   return new Promise((resolve, reject) => {
@@ -66,13 +117,13 @@ function checkConnectState(username) {
 }
 // 发送聊天信息
 function sendChatInfo(requestUsername, getMsg) {
-  const userChatSql = `INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('${requestUsername}', '', '${getMsg.type}', '${getMsg.content.default}', '${getMsg.content.type}', ${getMsg.groupId}, '${currentTime}')`
+  let timerstamp = currentTime()
+  const userChatSql = `INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('${requestUsername}', '', '${getMsg.type}', '${getMsg.content.default}', '${getMsg.content.type}', ${getMsg.groupId}, '${timerstamp}')`
   chatLogger.trace(`${requestUsername}发送消息成功SQL ====== ${userChatSql}`)
   queryTodo(userChatSql)
     .catch(err => {
       chatLogger.error(`${requestUsername}发送消息失败 ====== ${err.message}`)
     })
-
   let chatOption = {
     code: 0,
     data: {
@@ -84,7 +135,7 @@ function sendChatInfo(requestUsername, getMsg) {
         type: getMsg.content.type,
         default: getMsg.content.default
       },
-      timerstamp: currentTime
+      timerstamp: timerstamp
     },
     msg: "发送消息成功"
   }
@@ -95,13 +146,14 @@ function sendChatInfo(requestUsername, getMsg) {
 function sendUserInfo(ws, getMsg) {
   const queryGroupUserSql = `SELECT username, avator FROM m_group WHERE group_id = ${getMsg.groupId}`
   userLogger.trace(`群用户信息-SQL ====== ${queryGroupUserSql}`)
+  let timerstamp = currentTime()
   queryTodo(queryGroupUserSql).then(res => {
     let userOption = {
       code: 0,
       data: {
         type: getMsg.type,
         users: res,
-        timerstamp: new Date().getTime()
+        timerstamp: timerstamp
       },
       msg: "发送消息成功"
     }

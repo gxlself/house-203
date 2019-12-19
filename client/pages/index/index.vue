@@ -11,21 +11,23 @@
 					 :scroll-top="scrollTop" 
 					 id="scrollView"
 					 >
-			<view class="user-chat" 
-				 :class="[{'chat-left': username !== c.from || username !== c.user}, {'chat-right': username === c.from || username === c.user}]" 
-				 v-for="(c, i) in chats" :key="i">
-				<view :class="[{'left-ava': username !== c.user}, {'left-node': username === c.from}]">
-					{{ username !== c.user ? c.from[0] : ''}}
-				</view>
-				<view class="chat-content">
-					<view class="chat-nick">{{c.user}}</view>
-					<text :class="[
-								{'userself': !(username !== c.from || username !== c.user)},
-								{'other': username !== c.from || username !== c.user}
-							]" v-html="c.content.default"></text>
-				</view>
-				<view :class="[{'right-ava': username === c.user}, {'right-node': username !== c.from}]">
-					{{ username === c.user ? c.from[0] : ''}}
+			<view class="chat-list">
+				<view class="user-chat" 
+					 :class="[{'chat-left': username !== c.from}, {'chat-right': username === c.from}]" 
+					 v-for="(c, i) in chats" :key="i">
+					<view :class="[{'left-ava': username !== c.from}, {'left-node': username === c.from}]">
+						{{ username !== c.from ? c.from[0] : ''}}
+					</view>
+					<view class="chat-content">
+						<view class="chat-nick">{{c.from}}</view>
+						<text :class="[
+									{'userself': !(username !== c.from)},
+									{'other': username !== c.from}
+								]" v-html="c.content.default"></text>
+					</view>
+					<view :class="[{'right-ava': username === c.from}, {'right-node': username !== c.from}]">
+						{{ username === c.from ? c.from[0] : ''}}
+					</view>
 				</view>
 			</view>
 		</scroll-view>
@@ -51,13 +53,19 @@
 				users: {},
 				scrollTop: 1000,
 				isFocus: false,
-				groupId: 1
+				groupId: 1,
+				size: 15,
+				page: 1,
+				count: 0,
+				chatType: "groupChat",
+				isLoading: false,
 			}
 		},
 		components: {
 			headerBar
 		},
 		onLoad() {
+			this.getCacheChat()
 			this.initConnect((socket) => {
 				let chat = {
 					type: 'getUserInfo',
@@ -69,6 +77,7 @@
 			})
 		},
 		methods: {
+			// 监听消息发送
 			onMessage(response) {
 				let that = this
 				let message = JSON.parse(response.data)
@@ -104,21 +113,22 @@
 			focus() {
 				// #ifdef H5
 				setTimeout(() => {
-					document.documentElement.scrollTo(0, 1)
-				},200)
+					document.body.scrollTo(0, 9999)
+				}, 200)
 				// #endif
 				this.isFocus = true
 				// this.scrollToBottom()
 			},
 			blur() {
 				// #ifdef H5
-				document.scrollingElement.scrollTo(0, 1);
+				document.scrollingElement.scrollTo(0, 0);
 				// #endif
 				this.isFocus = false
 				// this.scrollToBottom()
 			},
+			// 退出
 			loginout() {
-				uni.clearStorageSync()
+				ni.clearStorageSync()
 				uni.showToast({ title: '登出成功', icon: 'loading', mask: true })
 				let timer = setTimeout(() => {
 					clearTimeout(timer)
@@ -132,7 +142,7 @@
 					return
 				}
 				let chat = {
-					type: "groupChat",
+					type: this.chatType,
 					groupId: that.groupId,
 					user: that.username,
 					content: {
@@ -161,6 +171,11 @@
 			},
 			// 下拉触顶
 			scrolltoupper() {
+				if (this.isLoading) {
+					return;
+				}
+				this.isLoading = true
+				this.getCacheChat()
 			},
 			// 上拉触底
 			scrolltolower() {
@@ -179,8 +194,12 @@
 				})
 			},
 			scrollToBottom() {
+				this.getNode().then(res => {
+					console.log(res)
+				})
 				this.scrollTop += 300
 			},
+			// 获取节点信息
 			getNode() {
 				return new Promise(function(resolve, reject){
 					let query = uni.createSelectorQuery().in(this)
@@ -192,6 +211,37 @@
 						}
 					}).exec();
 				})
+			},
+			getCacheChat() {
+				let that = this
+				let option = {
+					size: this.size,
+					page: this.page,
+					groupId: this.groupId,
+					chatType: this.chatType,
+				}
+				request('/user/chatlist', option, 'POST')
+					.then(response => {
+						if (response.code === 0) {
+							that.chats = response.data.chats.concat(that.chats)
+						} else {
+							uni.showToast({ icon: 'none', title: response.msg })
+						}
+						return response
+					})
+					.catch(error => {
+						uni.showToast({ icon: 'none', title: error.message })
+					})
+					.then(response => {
+						this.count = response.data.count
+						let page = Math.ceil(this.count / this.size)
+						if (that.isLoading && this.page < page) {
+							that.isLoading = false
+							that.page++
+						} else {
+							that.scrollToBottom()
+						}
+					})
 			}
 		},
 		onHide() {

@@ -10,6 +10,12 @@
             "path" : "pages/find-password/find-password"
         },{
             "path" : "pages/chat-list/chat-list"
+        },{
+            "path" : "pages/card-game/card-game"
+        }
+        ,{
+            "path" : "pages/choose/choose",
+            "style" : {}
         }
     ],
 	"globalStyle": {

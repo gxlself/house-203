@@ -16,5 +16,5 @@ const checkSingle = function(time) {
 }
 
 module.exports = {
-  currentTime: currentTime()
+  currentTime: currentTime
 }

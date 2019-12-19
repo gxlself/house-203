@@ -50,7 +50,7 @@ app.use(function (req, res, next) {
       requestAuthorization = req.headers.authorization.split(',')[0]
       requestUsername = req.headers.authorization.split(',')[1]
     } catch(err) {
-      res.send({code: -1, msg: '无效token', status: 401});
+      res.send(null);
       return
     }
   }
