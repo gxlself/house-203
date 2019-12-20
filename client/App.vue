@@ -5,7 +5,7 @@
 			let username = uni.getStorageSync('username')
 			if (token && username) {
 				uni.reLaunch({
-					url: 'pages/choose/choose'
+					url: 'pages/index/index'
 				})
 			}
 		},

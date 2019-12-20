@@ -10,6 +10,7 @@ expressWs(router);
 let userConnects = new Map()
 
 router
+
   .ws('/user', function(ws, req) {
     let conUser = req.query.authorization.split(',')[1]
     userLogger.trace(` ${conUser}建立连接 ====== just is connect`)
