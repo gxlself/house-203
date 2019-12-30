@@ -83,6 +83,16 @@ const socketTask = function(url) {
 			complete: ()=> {}
 		});
 		socket.onOpen(() => {
+			let chat = {
+				type: "refreshConnect",
+				content: '重新连入'
+			}
+			socket.send({
+				data: JSON.stringify(chat),
+				success() {
+					console.log('send success')
+				}
+			})
 			resolve(socket)
 		})
 		socket.onError(() => {

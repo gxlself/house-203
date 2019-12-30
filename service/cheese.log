@@ -243,3 +243,303 @@
 [2019-12-20T16:01:30.133] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='fMtEFmytDnyhDsv0q6ORq7qevGVnAfCffoJPpz02fa8'
 [2019-12-20T16:01:30.133] [INFO] token - 校验token ====== fMtEFmytDnyhDsv0q6ORq7qevGVnAfCffoJPpz02fa8
 [2019-12-20T16:01:30.135] [TRACE] user -  gxlself建立连接 ====== just is connect
+[2019-12-30T15:37:20.923] [TRACE] request - 服务开启 port - 2039
+[2019-12-30T15:38:01.892] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:38:01.893] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:38:01.893] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36
+[2019-12-30T15:38:01.893] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:38:01.893] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:38:02.202] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:38:02.202] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-30T15:38:02.202] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36
+[2019-12-30T15:38:02.202] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:38:02.202] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:38:02.534] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:38:02.536] [TRACE] chat - 查询聊天记录(groupChat-groupId is 1)-SQL ====== SELECT * FROM m_cache_chat WHERE group_id=1 ORDER BY TIMESTAMP DESC LIMIT 0, 15;
+[2019-12-30T15:38:02.536] [TRACE] chat - 查询聊天记录数量-SQL ====== SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=1;
+[2019-12-30T15:38:07.545] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:38:07.546] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:38:07.546] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:38:07.546] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:38:07.546] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:38:07.566] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:38:08.028] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:38:08.028] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:38:08.028] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:38:08.028] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:38:08.028] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:38:08.034] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:38:08.056] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:38:08.056] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-30T15:38:08.056] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:38:08.056] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:38:08.056] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:38:08.058] [TRACE] chat - 查询聊天记录(groupChat-groupId is 1)-SQL ====== SELECT * FROM m_cache_chat WHERE group_id=1 ORDER BY TIMESTAMP DESC LIMIT 0, 15;
+[2019-12-30T15:38:08.058] [TRACE] chat - 查询聊天记录数量-SQL ====== SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=1;
+[2019-12-30T15:38:08.229] [TRACE] user - 群用户信息-SQL ====== SELECT username, avator FROM m_group WHERE group_id = 1
+[2019-12-30T15:43:47.811] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:43:47.811] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:43:47.811] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:43:47.811] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:43:47.812] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:43:47.814] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:43:47.825] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:43:47.825] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-30T15:43:47.825] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:43:47.825] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:43:47.825] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:43:47.831] [TRACE] chat - 查询聊天记录(groupChat-groupId is 1)-SQL ====== SELECT * FROM m_cache_chat WHERE group_id=1 ORDER BY TIMESTAMP DESC LIMIT 0, 15;
+[2019-12-30T15:43:47.831] [TRACE] chat - 查询聊天记录数量-SQL ====== SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=1;
+[2019-12-30T15:43:53.451] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:43:53.451] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:43:53.451] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:43:53.451] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:43:53.451] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:43:53.453] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:47:53.928] [TRACE] request - 服务开启 port - 2039
+[2019-12-30T15:47:54.421] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:47:54.422] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:47:54.422] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:47:54.422] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:47:54.422] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:47:54.506] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:47:55.457] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:47:55.457] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-30T15:47:55.457] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:47:55.457] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:47:55.457] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:47:55.459] [TRACE] chat - 查询聊天记录(groupChat-groupId is 1)-SQL ====== SELECT * FROM m_cache_chat WHERE group_id=1 ORDER BY TIMESTAMP DESC LIMIT 0, 15;
+[2019-12-30T15:47:55.460] [TRACE] chat - 查询聊天记录数量-SQL ====== SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=1;
+[2019-12-30T15:47:55.590] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:47:55.591] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:47:55.591] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:47:55.591] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:47:55.591] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:47:55.594] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:47:57.567] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:47:57.567] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:47:57.567] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:47:57.567] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:47:57.567] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:47:57.569] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:48:40.741] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='ad0234829205b9033196ba818f7a872b' and password='e10adc3949ba59abbe56e057f20f883e';
+[2019-12-30T15:48:40.774] [TRACE] login - 登录查找token-SQL ====== SELECT * FROM m_token WHERE username='test2'
+[2019-12-30T15:48:48.875] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='ad0234829205b9033196ba818f7a872b' and password='e10adc3949ba59abbe56e057f20f883e';
+[2019-12-30T15:48:48.877] [TRACE] login - 登录查找token-SQL ====== SELECT * FROM m_token WHERE username='test2'
+[2019-12-30T15:48:51.769] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='8ad8757baa8564dc136c1e07507f4a98' and password='e10adc3949ba59abbe56e057f20f883e';
+[2019-12-30T15:48:51.771] [TRACE] login - 登录查找token-SQL ====== SELECT * FROM m_token WHERE username='test3'
+[2019-12-30T15:48:51.773] [TRACE] login - 存储token值-SQL ====== INSERT INTO m_token VALUES('nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QzIiwiaWF0IjoxNTc3NjkyMTMxLCJleHAiOjE1Nzc4NjQ5MzF9.nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI', 'test3')
+[2019-12-30T15:48:52.945] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:48:52.945] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:48:52.945] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:48:52.945] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:48:52.945] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:48:52.947] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:49:36.200] [TRACE] request - 服务开启 port - 2039
+[2019-12-30T15:49:36.309] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:49:36.309] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:49:36.309] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:49:36.309] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:49:36.310] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:49:36.391] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:49:36.391] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:49:36.391] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:49:36.391] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:49:36.391] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:49:36.401] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:49:36.402] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:49:37.270] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:49:37.270] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:49:37.270] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:49:37.270] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:49:37.270] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:49:37.272] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:49:37.629] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:49:37.630] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:49:37.630] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:49:37.630] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:49:37.630] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:49:37.632] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:49:37.666] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:49:37.666] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-30T15:49:37.666] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:49:37.666] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:49:37.666] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:49:37.669] [TRACE] chat - 查询聊天记录(groupChat-groupId is 1)-SQL ====== SELECT * FROM m_cache_chat WHERE group_id=1 ORDER BY TIMESTAMP DESC LIMIT 0, 15;
+[2019-12-30T15:49:37.669] [TRACE] chat - 查询聊天记录数量-SQL ====== SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=1;
+[2019-12-30T15:50:21.271] [TRACE] request - 服务开启 port - 2039
+[2019-12-30T15:50:21.318] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:50:21.318] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:50:21.319] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:50:21.319] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:50:21.319] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:50:21.404] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:50:21.404] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:50:21.404] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:50:21.404] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:50:21.404] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:50:21.414] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:50:21.415] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:50:22.414] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:50:22.415] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:50:22.415] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:50:22.415] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:50:22.415] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:50:22.417] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:50:22.758] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:50:22.758] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:50:22.758] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:50:22.758] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:50:22.758] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:50:22.761] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:50:22.788] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:50:22.789] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-30T15:50:22.789] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:50:22.789] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:50:22.789] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:50:22.794] [TRACE] chat - 查询聊天记录(groupChat-groupId is 1)-SQL ====== SELECT * FROM m_cache_chat WHERE group_id=1 ORDER BY TIMESTAMP DESC LIMIT 0, 15;
+[2019-12-30T15:50:22.794] [TRACE] chat - 查询聊天记录数量-SQL ====== SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=1;
+[2019-12-30T15:50:22.932] [TRACE] user - 群用户信息-SQL ====== SELECT username, avator FROM m_group WHERE group_id = 1
+[2019-12-30T15:50:23.688] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:50:23.688] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:50:23.689] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:50:23.689] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:50:23.689] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:50:23.691] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:50:49.297] [TRACE] request - 服务开启 port - 2039
+[2019-12-30T15:50:49.497] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:50:49.497] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:50:49.497] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:50:49.498] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:50:49.498] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:50:49.579] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:50:49.579] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:50:49.579] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:50:49.579] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:50:49.579] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:50:49.588] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:50:49.591] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:50:51.089] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:50:51.089] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:50:51.089] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:50:51.089] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:50:51.089] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:50:51.092] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:50:51.098] [TRACE] user - 群用户信息-SQL ====== SELECT username, avator FROM m_group WHERE group_id = 1
+[2019-12-30T15:50:51.114] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:50:51.114] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:50:51.114] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:50:51.114] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:50:51.114] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:50:51.115] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:51:28.347] [TRACE] request - 服务开启 port - 2039
+[2019-12-30T15:51:31.524] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:51:31.525] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:51:31.525] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:51:31.525] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:51:31.525] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:51:31.614] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:51:32.775] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:51:32.775] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:51:32.775] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:51:32.775] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:51:32.775] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:51:32.780] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:51:33.093] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:51:33.093] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:51:33.093] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:51:33.093] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:51:33.093] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:51:33.095] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:51:33.131] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:51:33.131] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-30T15:51:33.132] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:51:33.132] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:51:33.132] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:51:33.134] [TRACE] chat - 查询聊天记录(groupChat-groupId is 1)-SQL ====== SELECT * FROM m_cache_chat WHERE group_id=1 ORDER BY TIMESTAMP DESC LIMIT 0, 15;
+[2019-12-30T15:51:33.134] [TRACE] chat - 查询聊天记录数量-SQL ====== SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=1;
+[2019-12-30T15:51:33.277] [TRACE] user - 群用户信息-SQL ====== SELECT username, avator FROM m_group WHERE group_id = 1
+[2019-12-30T15:51:41.746] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:51:41.746] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:51:41.746] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:51:41.746] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:51:41.746] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:51:41.749] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:51:53.006] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:51:53.006] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:51:53.006] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:51:53.006] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:51:53.006] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:51:53.009] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:51:53.019] [TRACE] chat - test3发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('test3', '', 'groupChat', 'Djjdjfj', 'text', 1, '2019-12-30 15:51:53')
+[2019-12-30T15:51:54.478] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:51:54.478] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:51:54.478] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:51:54.478] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:51:54.478] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:51:54.480] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:51:54.487] [TRACE] chat - test3发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('test3', '', 'groupChat', 'Djjdjfj', 'text', 1, '2019-12-30 15:51:54')
+[2019-12-30T15:51:55.067] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:51:55.067] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:51:55.067] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:51:55.067] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:51:55.067] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:51:55.068] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:51:55.076] [TRACE] chat - test3发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('test3', '', 'groupChat', 'Djjdjfj', 'text', 1, '2019-12-30 15:51:55')
+[2019-12-30T15:51:55.121] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:51:55.121] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:51:55.121] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:51:55.121] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:51:55.121] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:51:55.125] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:51:55.134] [TRACE] chat - test3发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('test3', '', 'groupChat', 'Djjdjfj', 'text', 1, '2019-12-30 15:51:55')
+[2019-12-30T15:52:02.461] [TRACE] chat - test3发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('test3', '', 'groupChat', 'Jdjdjdj', 'text', 1, '2019-12-30 15:52:02')
+[2019-12-30T15:52:02.576] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:52:02.577] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-30T15:52:02.577] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:52:02.578] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:52:02.578] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:52:02.580] [TRACE] chat - 查询聊天记录(groupChat-groupId is 1)-SQL ====== SELECT * FROM m_cache_chat WHERE group_id=1 ORDER BY TIMESTAMP DESC LIMIT 0, 15;
+[2019-12-30T15:52:02.580] [TRACE] chat - 查询聊天记录数量-SQL ====== SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=1;
+[2019-12-30T15:52:06.187] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:52:06.187] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:52:06.187] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:52:06.187] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:52:06.187] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:52:06.189] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:52:11.757] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:52:11.757] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:52:11.757] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:52:11.757] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:52:11.757] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:52:11.759] [TRACE] user -  test3建立连接 ====== just is connect
+[2019-12-30T15:52:11.763] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:52:11.764] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-30T15:52:11.764] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (Linux; Android 8.1.0; PADM00 Build/O11019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/45016 Mobile Safari/537.36 MMWEBID/1636 MicroMessenger/7.0.9.1560(0x27000935) Process/tools NetType/WIFI Language/zh_CN ABI/arm64
+[2019-12-30T15:52:11.764] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI'
+[2019-12-30T15:52:11.764] [INFO] token - 校验token ====== nRbAfNlXEMNfVhEG8UJJmz3Ny7VO9jvsMbnm2Boe5HI
+[2019-12-30T15:52:11.765] [TRACE] chat - 查询聊天记录(groupChat-groupId is 1)-SQL ====== SELECT * FROM m_cache_chat WHERE group_id=1 ORDER BY TIMESTAMP DESC LIMIT 0, 15;
+[2019-12-30T15:52:11.765] [TRACE] chat - 查询聊天记录数量-SQL ====== SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=1;
+[2019-12-30T15:52:11.772] [TRACE] user - 群用户信息-SQL ====== SELECT username, avator FROM m_group WHERE group_id = 1
+[2019-12-30T15:52:15.664] [TRACE] chat - test3发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('test3', '', 'groupChat', 'Ooopp', 'text', 1, '2019-12-30 15:52:15')
+[2019-12-30T15:52:20.740] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:52:20.740] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:52:20.740] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:52:20.740] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:52:20.740] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:52:20.745] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:52:21.040] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:52:21.040] [TRACE] request - 请求进入referer ===== undefined
+[2019-12-30T15:52:21.040] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:52:21.040] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:52:21.040] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:52:21.042] [TRACE] user -  test1建立连接 ====== just is connect
+[2019-12-30T15:52:21.060] [TRACE] request - 请求进入host ===== 172.16.1.238:2039
+[2019-12-30T15:52:21.060] [TRACE] request - 请求进入referer ===== http://172.16.1.238:8080/
+[2019-12-30T15:52:21.060] [TRACE] request - 请求进入user-agent ===== Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1
+[2019-12-30T15:52:21.060] [INFO] token - 登录SQL执行 ====== SELECT a_token,username FROM m_token WHERE token='OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0'
+[2019-12-30T15:52:21.060] [INFO] token - 校验token ====== OL0L2pAxk5eLS6yYqIVjXoFAXE3ZhsZjRHO1gCa4YO0
+[2019-12-30T15:52:21.062] [TRACE] chat - 查询聊天记录(groupChat-groupId is 1)-SQL ====== SELECT * FROM m_cache_chat WHERE group_id=1 ORDER BY TIMESTAMP DESC LIMIT 0, 15;
+[2019-12-30T15:52:21.062] [TRACE] chat - 查询聊天记录数量-SQL ====== SELECT COUNT(*) AS COUNT FROM m_cache_chat WHERE group_id=1;
+[2019-12-30T15:52:21.241] [TRACE] user - 群用户信息-SQL ====== SELECT username, avator FROM m_group WHERE group_id = 1
+[2019-12-30T15:52:24.518] [TRACE] chat - test1发送消息成功SQL ====== INSERT INTO m_cache_chat (from_user, to_user, chat_type, chat_content, chat_content_type, group_id, timestamp) VALUES('test1', '', 'groupChat', '8546515', 'text', 1, '2019-12-30 15:52:24')

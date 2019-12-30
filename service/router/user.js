@@ -40,6 +40,9 @@ router
             case 'groupChat':
               sendChatInfo(requestUsername, getMsg)
               break;
+            case 'refreshConnect':
+              userLogger.trace(` ${requestUsername}重新建立连接 ====== just refresh connect`)
+              break;
             default: 
               console.log('-----default----')
               break;
