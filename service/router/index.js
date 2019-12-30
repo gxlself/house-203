@@ -77,7 +77,8 @@ function checkTokenInvalid(username, res) {
             }
           })
           .catch(err => {
-            res.send({ code: -1, msg: err.message, status: 200, data: null });
+            // token出错后 再次更新
+            saveToToken (username, res, false)
           })
       }
     })
@@ -117,7 +118,7 @@ function saveToToken(username, res, isInsert = true) {
   if (isInsert) {
     saveTokenSql = `INSERT INTO m_token VALUES('${token}', '${newAllToken}', '${username}')`
   } else {
-    saveTokenSql = `UPDATE m_token SET a_token='${token}', token='${newAllToken}', username='${username}'`
+    saveTokenSql = `UPDATE m_token SET a_token='${newAllToken}', token='${token}' WHERE username='${username}'`
   }
   loginLogger.trace(`存储token值-SQL ====== ${saveTokenSql}`)
   queryTodo(saveTokenSql)
