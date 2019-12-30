@@ -128,12 +128,14 @@
 			},
 			// 退出
 			loginout() {
-				uni.clearStorageSync()
-				uni.showToast({ title: '登出成功', icon: 'loading', mask: true })
-				let timer = setTimeout(() => {
-					clearTimeout(timer)
-					uni.reLaunch({ url: '../login/login' })
-				}, 1000)
+				// uni.clearStorageSync()
+				// uni.showToast({ title: '登出成功', icon: 'loading', mask: true })
+				// let timer = setTimeout(() => {
+				// 	clearTimeout(timer)
+				// 	uni.reLaunch({ url: '../login/login' })
+				// }, 1000)
+
+				uni.reLaunch({ url: '../card-game/card-game' })
 			},
 			sendMessage() {
 				const that = this
@@ -246,6 +248,9 @@
 		},
 		onHide() {
 			this.initConnect()
+		},
+		onUnload() {
+			chatSocket = null
 		},
 		computed: {
 			isIphoneX() {

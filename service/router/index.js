@@ -109,7 +109,7 @@ function saveUserInfo(md5User, md5Pass, username, password, loginStatus = 1, res
       registerLogger.error(`用户注册Token存储 ====== ${err.message}`)
     })
 }
-// 存储token值
+// 存储token值 isInsert true 是新增token false 为更细token
 function saveToToken(username, res, isInsert = true) {
   let newAllToken = createToken({ username });
   let t = newAllToken.split('.')
