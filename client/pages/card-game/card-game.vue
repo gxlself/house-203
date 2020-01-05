@@ -3,7 +3,8 @@
 		<header-bar title="卡牌游戏" :back="true"></header-bar>
 		<view class="game-house">
 			<view class="game-house-item" v-for="(house, index) in gameHouses">
-
+				<view></view>
+				<view></view>
 			</view>
 		</view>
 	</view>
@@ -25,7 +26,13 @@
 
 		},
 		onLoad() {
-
+			this.gameHouses = [
+				{name: 1, id: 1},
+				{name: 1, id: 1},
+				{name: 1, id: 1},
+				{name: 1, id: 1},
+				{name: 1, id: 1},
+			]
 		},
 		onShow() {
 
@@ -37,10 +44,15 @@
 .game-page{
 	padding: 80upx 0 0;
 	.game-house{
-		display: flex;
-		justify-content: space-around;
 		&-item{
+			width: 400upx;
+			height: 400upx;
+			border-radius: 50%;
+			margin: 0 auto;
 			box-shadow: 0 0 12upx #eee;
+		}
+		&-item+&-item{
+			margin-bottom: 30upx;
 		}
 	}
 }

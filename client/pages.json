@@ -1,6 +1,9 @@
 {
 	"pages": [ 
 		{
+            "path" : "pages/card-game/card-game"
+        },
+		{
 			"path" : "pages/login/login"
 		},{
 			"path": "pages/index/index"
@@ -10,8 +13,6 @@
             "path" : "pages/find-password/find-password"
         },{
             "path" : "pages/chat-list/chat-list"
-        },{
-            "path" : "pages/card-game/card-game"
         },{
             "path" : "pages/choose/choose",
             "style" : {}
