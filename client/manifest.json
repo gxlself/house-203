@@ -60,5 +60,12 @@
             "es6" : true
         },
         "usingComponents" : true
+    },
+    "h5" : {
+        "title" : "client",
+        "domain" : "https://gxlself.utools.club",
+        "router" : {
+            "base" : ""
+        }
     }
 }

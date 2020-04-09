@@ -3,3 +3,4 @@
 [2020-01-04T20:46:22.093] [ERROR] login - 登录出错-err.message ====== read ECONNRESET
 [2020-01-04T20:47:07.231] [TRACE] login - 系统登录SQL ====== select username,password,o_username from m_users where username='5c1338f06725fee21bfe6e43ef2a18e0' and password='e10adc3949ba59abbe56e057f20f883e';
 [2020-01-04T20:47:09.271] [ERROR] login - 登录出错-err.message ====== connect ECONNREFUSED 127.0.0.1:3306
+[2020-04-08T23:38:37.983] [TRACE] request - 服务开启 port - 2039

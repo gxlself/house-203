@@ -1,8 +1,5 @@
 {
-	"pages": [ 
-		{
-            "path" : "pages/card-game/card-game"
-        },
+	"pages": [
 		{
 			"path" : "pages/login/login"
 		},{

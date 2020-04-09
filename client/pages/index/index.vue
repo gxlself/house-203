@@ -112,8 +112,9 @@
 			},
 			focus() {
 				// #ifdef H5
-				setTimeout(() => {
+				let timer = setTimeout(() => {
 					document.body.scrollTo(0, 9999)
+					clearTimeout(timer)
 				}, 200)
 				// #endif
 				this.isFocus = true
@@ -128,14 +129,14 @@
 			},
 			// 退出
 			loginout() {
-				// uni.clearStorageSync()
-				// uni.showToast({ title: '登出成功', icon: 'loading', mask: true })
-				// let timer = setTimeout(() => {
-				// 	clearTimeout(timer)
-				// 	uni.reLaunch({ url: '../login/login' })
-				// }, 1000)
+				uni.clearStorageSync()
+				uni.showToast({ title: '登出成功', icon: 'loading', mask: true })
+				let timer = setTimeout(() => {
+					clearTimeout(timer)
+					uni.reLaunch({ url: '../login/login' })
+				}, 1000)
 
-				uni.reLaunch({ url: '../card-game/card-game' })
+				// uni.reLaunch({ url: '../card-game/card-game' })
 			},
 			sendMessage() {
 				const that = this
@@ -175,6 +176,9 @@
 			scrolltoupper() {
 				if (this.isLoading) {
 					return;
+				}
+				if (this.chats.length >= this.count) {
+					return
 				}
 				this.isLoading = true
 				this.getCacheChat()
@@ -235,9 +239,9 @@
 						uni.showToast({ icon: 'none', title: error.message })
 					})
 					.then(response => {
-						this.count = response.data.count
-						let page = Math.ceil(this.count / this.size)
-						if (that.isLoading && this.page < page) {
+						that.count = response.data.count
+						let page = Math.ceil(that.count / that.size)
+						if (that.isLoading && that.page < page) {
 							that.isLoading = false
 							that.page++
 						} else {

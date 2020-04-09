@@ -66,14 +66,19 @@
 					username: this.username,
 					password: this.password
 				}
+				uni.showLoading({
+					title: '注册中~'
+				})
 				register('/register', option).then(res => {
+					uni.hideLoading()
 					if (res.code === 0) {
 						uni.showToast({ title: '注册成功', icon: 'loading', mask: true })
 						uni.setStorageSync('token', res.data.token)
 						uni.setStorageSync('username', res.data.username)
 						let timer = setTimeout(() => {
 							clearTimeout(timer)
-							uni.reLaunch({ url: '../index/index' })
+							// uni.reLaunch({ url: '../index/index' })
+							uni.redirectTo({ url: '../index/index' })
 						}, 1000)
 					} else {
 						uni.showToast({ icon: 'none', title: res.msg })
